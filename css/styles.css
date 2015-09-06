@@ -449,10 +449,10 @@ p {
     line-height: 25px;
 }
 a {
-    color: rgba(255,53,0,0.5)
+    color: rgb(255,255,255)
 }
 a:hover, a:focus {
-    color: rgba(255,53,0,0.5);
+    color: rgba(255,100,25,0.5);
     text-decoration: none;
 }
 .texture-overlay {
@@ -472,26 +472,26 @@ Buttons
     margin: 0 10px 10px 0;
     padding: 20px 50px;
     border-radius: 3px;
-    background-color: rgb(255,53,0);
+    background-color: rgb(255,100,25);
     color: rgb(255,255,255);
     font-size: 16px;
 }
 .download-btn:hover, .download-btn:focus {
     background-color: rgb(255,255,255);
-    color: rgb(255,53,0);
+    color: rgb(255,100,25);
     text-decoration: none;
 }
 .learn-btn, .download-btn {
     display: inline-block;
     padding: 18px 46px;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     border-radius: 3px;
     color: rgb(255,255,255);
     font-size: 16px;
 }
 .learn-btn:hover, .learn-btn:focus {
-    border-color: rgba(255,53,0,0.5);
-    color: rgba(255,53,0,0.5);
+    border-color: rgba(255,100,25,0.5);
+    color: rgba(255,100,25,0.5);
     text-decoration: none;
 }
 .read-more-btn {
@@ -575,27 +575,47 @@ Navigation
 }
 
 /* ==========================================================================
+Header-nav
+========================================================================== */
+.header-nav {
+    display: block;
+    padding: 11px 20px;
+    font-size: 20px;
+}
+.header-nav:hover {
+    padding: 10px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+a.header-nav {
+    color: inherit;
+}
+
+/* ==========================================================================
 Hero
 ========================================================================== */
 .hero {
     position: relative;
-    padding: 60px 0 60px 0;
+    padding: 30px 0 60px 0;
     min-height: 800px;
-    background: rgb(255, 53, 0) no-repeat center center;
+    background: rgb(255,100,25) url('../img/background/sf.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
 }
 .hero h1 {
-    margin: 200px 0 0 0;
+    margin: 180px 0 0 0;
     font-weight: 300;
     font-size: 45px;
+    color: #333;
 }
 .hero h1 span {
     display: inline-block;
     color: #a1a9b0;
 }
 .hero h3 {
-    margin: 0 0 30px 0;
+    margin: 20px 0 30px 0;
+    color: #333;
 }
 #home {
     width: 100%;
@@ -612,6 +632,10 @@ header i {
 /* ==========================================================================
 Video
 ========================================================================== */
+.yt-player {
+    height: 500px;
+}
+
 section.video i {
     margin-right: 10px;
     color: #323a45;
@@ -632,11 +656,11 @@ section.video a {
     color: #323a45
 }
 section.video a:hover, section.video a:focus {
-    color: rgba(255,53,0,0.5);
+    color: rgba(255,100,25,0.5);
     text-decoration: none;
 }
 section.video a:hover i, section.video a:focus i {
-    color: rgba(255,53,0,0.5)
+    color: rgba(255,100,25,0.5)
 }
 
 /* ==========================================================================
@@ -674,7 +698,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-color: rgba(255,53,0,0.5);
+    background-color: rgb(255,100,25);
 }
 .features-slider ul {
     margin: 0;
@@ -730,13 +754,14 @@ Features List
     display: inline-block;
     margin-left: 0;
     width: 65%;
+    color:;
 }
 .feature-icon {
     display: inline-block;
     margin-right: 25px;
     width: 90px;
     height: 90px;
-    border: solid 2px #4e9ba3;
+    border: solid 2px rgb(255,100,25);
     border-radius: 50%;
     vertical-align: top;
     text-align: center;
@@ -744,7 +769,7 @@ Features List
     line-height: 90px;
 }
 .feature-icon i {
-    color: #4e9ba3
+    color: rgb(255,100,25);
 }
 
 /* ==========================================================================
@@ -780,7 +805,6 @@ Showcase
 ========================================================================== */
 .showcase {
     background: url('../img/background/people2.jpg') no-repeat center center fixed;
-    filter: brightness(0.3);
     background-size: cover;
 }
 .showcase h1 {
@@ -795,7 +819,7 @@ Showcase
 }
 .device {
     position: absolute;
-    top: -60px;
+    top: -20px;
     left: 20%;
     min-height: 676px;
     width: 359px;
@@ -844,6 +868,9 @@ Screenshots Intro
     margin-bottom: 25px;
     color: #778899;
 }
+.screenshots-intro a {
+    color: rgb(255,100,25);
+}
 
 /* ==========================================================================
 Screenshots
@@ -882,7 +909,7 @@ Screenshots
     padding: 25% 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,53,0,0.6);
+    background-color: rgba(255,100,25,0.6);
     text-align: center;
     font-size: 15px;
     opacity: 0;
@@ -936,7 +963,7 @@ Download Now
 ========================================================================== */
 .download {
     padding: 120px 0;
-    background-color: rgb(255,53,0);
+    background-color: rgb(255,100,25);
 }
 .download h1 {
     margin: 0 0 15px 0;
@@ -950,6 +977,9 @@ Footer
 ========================================================================== */
 footer {
     padding: 100px 0
+}
+footer a {
+    color: rgb(255,100,25);
 }
 footer p {
     color: #c7cacc;
@@ -966,7 +996,7 @@ footer li {
     font-weight: 400;
 }
 footer li a {
-    color: rgb(255,53,0);
+    color: rgb(255,100,25);
 }
 footer li:last-child {
     margin-right: 0;
@@ -983,7 +1013,7 @@ Nav Overlay
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 53, 0, 0.90);
+    background: rgba(255,100,25,0.90);
 }
 
 /* Menu style */
@@ -1023,7 +1053,7 @@ Nav Overlay
     min-width: 190px;
     border: 2px solid #fff;
     border-radius: 3px;
-    background-color: rgba(255,53,0,1);
+    background-color: rgb(255,100,25);
     color: #fff;
     text-transform: uppercase;
     font-weight: 400;
