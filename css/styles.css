@@ -588,6 +588,9 @@ Header-nav
     border-radius: 5px;
     color: #FFFFFF;
 }
+.header-nav:focus {
+    outline: none;
+}
 a.header-nav {
     color: inherit;
 }
@@ -614,8 +617,20 @@ Hero
     color: #a1a9b0;
 }
 .hero h3 {
-    margin: 20px 0 30px 0;
+    margin: 10px 0 20px 0;
     color: #333;
+}
+.hero .send-link {
+    display: inline-block;
+    margin-left: -6px;
+    padding: 10px 20px;
+    border: 2px solid rgb(255, 100, 25);
+    background-color: rgb(255, 100, 25);
+    color: rgb(255, 255, 255);
+}
+.hero .send-link:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 100, 25);
 }
 #home {
     width: 100%;
@@ -629,8 +644,15 @@ Hero
     padding: 10px 20px;
     font-size: 16px;
     color: #333;
-    border: 2px solid rgb(255,255,255);
+    border: 2px solid rgb(255, 100, 25);
     background: rgba(255,255,255,0.5);
+
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-property: color, border-color, background-color;
+    transition-property: color, border-color, background-color;
 }
 .hero input:focus {
     outline: none;
@@ -694,7 +716,7 @@ Features Slider
 ========================================================================== */
 .features-bg {
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
     background: url('../img/map-berkeley.png') no-repeat center center;
     background-size: cover;
 }
@@ -794,16 +816,21 @@ blockquote p {
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 70%;
+    width: 60%;
     vertical-align: top;
     font-style: italic;
 }
 blockquote .avatar {
     display: inline-block;
     margin-right: 20px;
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 100, 25);
+}
+blockquote .avatar img {
+    width: 100%;
 }
 blockquote .logo-quote {
     display: inline-block;
@@ -865,7 +892,7 @@ Showcase
 Screenshots Intro
 ========================================================================== */
 .screenshots-intro {
-    padding: 170px 0 100px 0;
+    padding: 70px 0 100px 0;
     background-color: #f6f7f9;
 }
 .screenshots-intro h1 {
@@ -929,7 +956,7 @@ Screenshots
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
-.screenshots figcaption a {
+.screenshots figcaption p {
     color: #FFFFFF;
 }
 .screenshots figure:hover figcaption, .screenshots figure:focus figcaption {
@@ -986,7 +1013,7 @@ Download Now
 Footer
 ========================================================================== */
 footer {
-    padding: 100px 0
+    padding: 30px 0
 }
 footer a {
     color: rgb(255,100,25);

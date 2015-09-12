@@ -25,17 +25,14 @@ $(document).ready(function() {
 
 	/***************** Flickity ******************/
 
-	$('#featuresSlider').flickity({
-		cellAlign: 'left',
-		contain: true,
-		prevNextButtons: false
-	});
-
 	$('#showcaseSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
-		imagesLoaded: true
+		imagesLoaded: true,
+		autoPlay: true,
+		pageDots: false,
+		wrapAround: true
 	});
 
 	/***************** Fancybox ******************/
@@ -97,3 +94,26 @@ $('a[href*=#]:not([href=#])').click(function() {
 		}
 	}
 });
+
+/***************** Youtube API **********************/
+
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+	player = new YT.Player('yt-player', {
+	    height: '400px',
+	    width: '100%',
+	    videoId: 'jofNR_WkoCE',
+	    playerVars: {
+	      'controls': 0,
+	      'rel': 0,
+	      'showinfo': 0,
+	      'modestbranding': 1,
+	    },
+	});
+}
