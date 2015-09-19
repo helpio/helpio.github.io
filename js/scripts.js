@@ -1,3 +1,7 @@
+$(window).load(function() {
+	$('.loading-page').fadeOut();
+});
+
 $(document).ready(function() {
 
 	/***************** Waypoints ******************/

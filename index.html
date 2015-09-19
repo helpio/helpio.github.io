@@ -14,23 +14,23 @@
 
 		<!-- Main -->
 		<title>Helpio!</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Content" />
+		<meta name="keywords" content="Content" />
 		<meta name="author" content="Helpio Inc." />
 		
 		<!-- Bootstrap -->
 		<script src="js/modernizr.custom.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
-		<link href="css/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/flickity.css" rel="stylesheet" >
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
 		<link href="css/queries.css" rel="stylesheet">
 
 		<!-- Google Font -->
 		<link href='https://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 
 		<!-- Facebook and Twitter integration -->
 		<meta property="og:title" content=""/>
@@ -59,38 +59,35 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<!-- open/close -->
+
+		<section class="loading-page"></section>
 		<header>
 			<section class="hero">
 				<div class="container">
 					<div class="row nav-wrapper">
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-left">
-							<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo"></a>
-						</div>
-						<div class="col-lg-9 col-md-9 hidden-sm hidden-xs">
+						
+						<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
+						
+						<div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8 hidden-sm hidden-xs">
 							<div class="row">
-								<div class="col-lg-3 col-md-3">
+								<div class="col-lg-4 col-md-4">
 									<a href="#about" class="text-center header-nav">
-										About
+										Home
 									</a>
 								</div>
-								<div class="col-lg-3 col-md-3">
+								<div class="col-lg-4 col-md-4">
 									<a href="#features" class="text-center header-nav">
 										Features
 									</a>
 								</div>
-								<div class="col-lg-3 col-md-3">
+								<div class="col-lg-4 col-md-4">
 									<a href="#screenshots" class="text-center header-nav">
-										Screenshots
-									</a>
-								</div>
-								<div class="col-lg-3 col-md-3">
-									<a href="#download" class="text-center header-nav">
-										Download
+										Guidelines
 									</a>
 								</div>
 							</div>
 						</div>
-						<div class="hidden-lg hidden-md col-sm-6 col-xs-6 text-right navicon">
+						<div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-right navicon">
 							<p>MENU</p>
 							<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
 						</div>
@@ -98,10 +95,14 @@
 					<div class="row hero-content">
 						<div class="col-md-6 text-right">
 							<h1 class="animated fadeInDown">Download the app!</h1>
-							<h3>Enter your phone number below</h3>
-							<!-- <a href="#about" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a> -->
-							<input type="text" class="input"></input>
-							<input type="submit" class="send-link"></input>
+							<div class="visible-lg visible-md visible-sm hidden-xs">
+								<h3>Enter your phone number below</h3>
+								<input type="text" class="input" maxlength="15"></input>
+								<input type="submit" class="send-link"></input>
+							</div>
+							<div class="hidden-lg hidden-md hidden-sm visible-xs">
+								<img src="img/vendor/apple-appstore.svg" />
+							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="device wp3">
@@ -148,24 +149,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="col-md-6 nopadding">
-						<div class="features-slider">
-							<ul class="slides" id="featuresSlider">
-								<li>
-									<h1>Know what's around you!</h1>
-									<p>People relates social media nowadays by being anti-social, but with this app we let you know what's happening around your area. Not going be anti-social agian with this app!</p>
-								</li>
-								<li>
-									<h1>Map! Map! Map!</h1>
-									<p>By using map, we know exactly where something is really happening. Instead of vaguely identify where an event is being held, you can just track down by this app!</p>
-								</li>
-								<li>
-									<h1>The Ideal Social Media App</h1>
-									<p>We want to make you connect with people around you, not people who is far away from you. The word social means to make closer who is close by, does not make you anti-social by alone with playing your phone.</p>
-								</li>
-							</ul>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</section>
@@ -202,37 +185,6 @@
 							</div>
 						</div>
 
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="showcase">
-			<div class="showcase-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-
-						</div>
-						<div class="col-md-6">
-							<h1>What's there?</h1>
-							<p>Have you ever wonder when you passed by a crowd of people and don't know what's happening? With Shout we make a shout and ask people what's going on - or probably people already put a shout on it.</p>
-
-							<h1>Want to share your thought anonymously?</h1>
-							<p>Just pick the anonymous option then make a shout! Probably you want to tell your neighbour to quite down or you want to tell others about your love story, you can do it with Helpio!
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="screenshots-intro">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<blockquote class="team-quote">
-							<div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."<br><br>- Peter Finlan</p>
-						</blockquote>
 					</div>
 				</div>
 			</div>
@@ -329,12 +281,32 @@
 				</div>
 			</div>
 		</section>
-		<section class="download" id="download">
+		<section class="screenshots-intro">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 text-center wp4">
-						<h1>Seen Enough?</h1>
-						<a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i class="fa fa-download"></i></a>
+					<div class="col-md-12">
+						<blockquote class="team-quote">
+							<div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."<br><br>- Peter Finlan</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="showcase">
+			<div class="showcase-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+
+						</div>
+						<div class="col-md-6">
+							<h1>What's there?</h1>
+							<p>Have you ever wonder when you passed by a crowd of people and don't know what's happening? With Shout we make a shout and ask people what's going on - or probably people already put a shout on it.</p>
+
+							<h1>Want to share your thought anonymously?</h1>
+							<p>Just pick the anonymous option then make a shout! Probably you want to tell your neighbour to quite down or you want to tell others about your love story, you can do it with Helpio!
+						</div>
 					</div>
 				</div>
 			</div>
@@ -375,16 +347,19 @@
 				</ul>
 			</nav>
 		</div>
+		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/min/toucheffects-min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/flickity.pkgd.min.js"></script>
 		<script src="js/jquery.fancybox.pack.js"></script>
+		
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/retina.js"></script>
 		<script src="js/waypoints.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+		
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
 		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
