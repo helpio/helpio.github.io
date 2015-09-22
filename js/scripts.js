@@ -2,12 +2,12 @@ $(window).load(function() {
 	$('.loading-page').fadeOut();
 });
 
-$('body').click(function() {
-	var x = event.pageX;
-	var y = event.pageY;
-	// var pin = "<img src='img/icon/pin-red.png' style='position: absolute; top:"+(y-70)+"px; left:"+x+"px;'></div>";
+$('.map-intro-bg').click(function() {
+	var x = event.layerX;
+	var y = event.layerY;
+	var pin = "<img src='img/icon/pin-red.png' style='position: absolute; top:"+(y-60)+"px; left:"+(x-25)+"px;'></div>";
 	console.log("position: " + x +"px "+ y + "px");
-	// $(this).append(pin);
+	$(this).append(pin);
 });
 
 $(document).ready(function() {

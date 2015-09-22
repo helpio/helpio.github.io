@@ -750,6 +750,7 @@ Features Slider
 ========================================================================== */
 .map-intro {
     cursor: url("../img/icon/pin.png") 15 35, auto;
+    overflow: hidden;
 }
 .map-intro-bg {
     position: relative;
