@@ -515,7 +515,7 @@ Navigation
 ========================================================================== */
 .nav-toggle {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 15px;
     z-index: 999999;
     padding: 10px 35px 16px 0px;
@@ -566,7 +566,7 @@ Navigation
     height: 26px;
 }
 .navicon p {
-    margin: 1px 50px 0 0
+    margin: 10px 50px 0 0
 }
 .navicon-fixed {
     position: fixed;
@@ -586,6 +586,15 @@ Navigation
 /* ==========================================================================
 Header-nav
 ========================================================================== */
+.nav-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
+    background: #333;
+    background: rgba(0,0,0,0.2);
+    color: #ffffff;
+}
 .header-nav {
     display: block;
     padding: 10px 20px;
@@ -595,7 +604,7 @@ Header-nav
     color: #EEEEEE;
 }
 .header-nav:hover {
-    color: rgb(255, 100, 25);
+    background: rgba(255, 255, 255, 0.3);
 }
 .header-nav:focus {
     outline: none;
@@ -616,7 +625,8 @@ Hero
     color: #fff;
 }
 .hero h1 {
-    margin: 180px 0 0 0;
+    font-family: 'PT Sans', sans-serif;
+    margin: 280px 0 15px 0;
     font-weight: 300;
     font-size: 45px;
     color: #333;
@@ -626,8 +636,8 @@ Hero
     color: #a1a9b0;
 }
 .hero h3 {
-    margin: 10px 0 20px 0;
-    color: #333;
+    margin: 10px 10px 10px 0;
+    color: #888;
 }
 #home {
     width: 100%;
@@ -678,7 +688,7 @@ Hero
 }
 .hero .logo-helpio {
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 60px;
 }
 header i {
@@ -738,58 +748,46 @@ Custom Slider Controls (Flickity)
 /* ==========================================================================
 Features Slider
 ========================================================================== */
-.features-bg {
+.map-intro {
+    cursor: url("../img/icon/pin.png") 15 35, auto;
+}
+.map-intro-bg {
     position: relative;
     min-height: 500px;
     background: url('../img/map-berkeley.png') no-repeat center center;
     background-size: cover;
+    text-align: center;
 }
-.features-img {
+.map-intro-bg .info-pin {
+    padding-top: 100px;
+    padding-bottom: 5px;
+    width: 300px;
+}
+.map-intro-bg .main-pin {
+    width: 40px;
+}
+.map-intro-bg .pin {
+    position: absolute;
+}
+.map-intro-bg .info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFF;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 3px;
+}
+.map-intro-bg .info h4 {
+    padding-top: 0;
+}
+.map-intro-img {
     width: 100%;
     height: 400px;
     text-align: center;
     line-height: 400px;
 }
-.features-slider {
-    position: relative;
-    padding: 11% 100px 10% 100px;
-    height: 400px;
-    background-color: rgb(255,100,25);
-}
-.features-slider ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.features-slider ul li {
-    width: 100%;
-}
-.features-slider li h1 {
-    margin-bottom: 15px;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-}
-.features-slider li p {
-    color: #fff;
-    font-size: 14px;
-}
-.features-intro-img {
-    position: relative
-}
-.slides li h1 {
-    margin: 0;
-    padding: 0;
-}
-.features-slider .flickity-page-dots {
-    text-align: left;
-    margin-top: 50px;
-    position: static;
-}
-.features-slider .flickity-page-dots .dot {
-    margin: 0 12px 0 0;
-}
-
 /* ==========================================================================
 Features List
 ========================================================================== */
@@ -829,39 +827,6 @@ Features List
 }
 
 /* ==========================================================================
-Blockquote
-========================================================================== */
-blockquote {
-    margin: 40px 0 0;
-    padding: 0;
-    border: none;
-}
-blockquote p {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 60%;
-    vertical-align: top;
-    font-style: italic;
-}
-blockquote .avatar {
-    display: inline-block;
-    margin-right: 20px;
-    width: 80px;
-    height: 80px;
-    vertical-align: middle;
-    border-radius: 50%;
-    border: 2px solid rgb(255, 100, 25);
-}
-blockquote .avatar img {
-    width: 100%;
-}
-blockquote .logo-quote {
-    display: inline-block;
-    margin: 0 0 0 90px;
-}
-
-/* ==========================================================================
 Showcase
 ========================================================================== */
 .showcase {
@@ -880,7 +845,7 @@ Showcase
 }
 .device {
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 20%;
     min-height: 676px;
     width: 359px;
@@ -913,27 +878,44 @@ Showcase
 }
 
 /* ==========================================================================
-Screenshots Intro
+Testimony
 ========================================================================== */
-.screenshots-intro {
-    padding: 70px 0 100px 0;
-    background-color: #f6f7f9;
+.testimony {
+    padding: 50px 0 100px 0;
 }
-.screenshots-intro h1 {
-    margin-bottom: 20px;
-    color: #24374b;
-    font-weight: 400;
-    font-size: 22px;
+.testimony .slide {
+    width: 100%;
+    text-align: center;
 }
-.screenshots-intro p {
-    margin-bottom: 25px;
-    color: #778899;
+.testimony blockquote {
+    margin: 40px 0 0;
+    padding: 0;
+    border: none;
 }
-.screenshots-intro a {
-    color: rgb(255,100,25);
+.testimony blockquote p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    vertical-align: top;
+    font-style: italic;
 }
-.screenshots-intro a:hover {
-    color: rgba(255,100,25,0.5);
+.testimony blockquote .avatar {
+    display: inline-block;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 100, 25);
+}
+.testimony blockquote .avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+.testimony blockquote .logo-quote {
+    display: inline-block;
+    margin: 0 0 0 90px;
 }
 
 /* ==========================================================================

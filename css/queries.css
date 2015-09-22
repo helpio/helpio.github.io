@@ -1,9 +1,10 @@
 @media screen and (max-width:1200px){
-	.device{left:20%;top:-36px;}
+	.device{left:35%;}
 	footer li{margin-right:10%;}
 	.feature-content{width:55%;}
 }
 @media screen and (max-width:991px){
+	.nav-wrapper{height: 50px;}
 	.feature-1,.feature-2{margin-bottom:50px;}
 	.device{display:none;}
 	.screenshots ul li{width:50%;}
@@ -22,12 +23,14 @@
 	.overlay ul li a{padding:20px 0;min-width:120px;font-size:12px;}
 }
 @media screen and (max-width:465px){
-	.hero h1{font-size:40px;margin:140px 0 10px 0}
+	.hero h1{font-size:30px;margin:300px 0 10px 0}
 	section.video i{font-size:30px;}
 	section.video h1{font-size:15px;font-weight:400;}
 	section.video{padding:40px;}
 	.feature-content{width:100%;text-align:center;margin-top:20px;}
-	.feature-icon{display:block;margin:0 auto;}
+	.features-list{padding:50px 0;}
+	.feature-1,.feature-2{margin-bottom:10px;}
+	.feature-icon{display:block;margin:0 auto;width:70px;height:70px;line-height:70px;}
 	blockquote p{width:60%;}
 	.features-slider {padding: 11% 50px 10% 50px;}
 }

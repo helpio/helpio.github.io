@@ -21,16 +21,17 @@
 		<!-- Bootstrap -->
 		<script src="js/modernizr.custom.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
+		
+		<link href="css/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/flickity.css" rel="stylesheet" >
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/queries.css" rel="stylesheet">
 
 		<!-- Google Font -->
-		<link href='https://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		
+		<link href='http://fonts.googleapis.com/css?family=Nunito:300|PT+Sans|Pontano+Sans' rel='stylesheet' type='text/css'>
 
 		<!-- Facebook and Twitter integration -->
 		<meta property="og:title" content=""/>
@@ -61,37 +62,36 @@
 		<!-- open/close -->
 
 		<section class="loading-page"></section>
+		<div class="nav-wrapper">
+			<div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8 hidden-sm hidden-xs">
+				<div class="row">
+					<div class="col-lg-4 col-md-4">
+						<a href="#about" class="text-center header-nav">
+							Home
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<a href="#features" class="text-center header-nav">
+							Features
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<a href="#screenshots" class="text-center header-nav">
+							Guidelines
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-right navicon">
+				<p>MENU</p>
+				<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+			</div>
+		</div>
+
 		<header>
 			<section class="hero">
 				<div class="container">
-					<div class="row nav-wrapper">
-						
-						<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
-						
-						<div class="col-lg-offset-4 col-lg-4 col-md-offset-2 col-md-8 hidden-sm hidden-xs">
-							<div class="row">
-								<div class="col-lg-4 col-md-4">
-									<a href="#about" class="text-center header-nav">
-										Home
-									</a>
-								</div>
-								<div class="col-lg-4 col-md-4">
-									<a href="#features" class="text-center header-nav">
-										Features
-									</a>
-								</div>
-								<div class="col-lg-4 col-md-4">
-									<a href="#screenshots" class="text-center header-nav">
-										Guidelines
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-right navicon">
-							<p>MENU</p>
-							<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
-						</div>
-					</div>
+					<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
 					<div class="row hero-content">
 						<div class="col-md-6 text-right">
 							<h1 class="animated fadeInDown">Download the app!</h1>
@@ -139,13 +139,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="features-intro">
+		<section class="map-intro">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12 nopadding features-intro-img">
-						<div class="features-bg">
-							<div class="features-img wp1">
-								<img src="img/logo/helpio-pin.png" alt="Helpio">
+					<div class="col-md-12 nopadding">
+						<div class="map-intro-bg">
+							<div class="wp1">
+								<img src="img/preview/info-pin.png" class="info-pin" /><br>
+								<img src="img/icon/pin-red.png" class="main-pin" alt="Helpio">
 							</div>
 						</div>
 					</div>
@@ -163,7 +164,6 @@
 							<div class="feature-content">
 								<h1>Know what's around you!</h1>
 								<p>People relates social media with being anti-social, but with this app we let you know what's happening around your area - not anti-social anymore!
-								<!-- <a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a> -->
 							</div>
 						</div>
 						<div class="col-md-4 feature-2 wp2 delay-05s">
@@ -281,14 +281,36 @@
 				</div>
 			</div>
 		</section>
-		<section class="screenshots-intro">
+		<section class="testimony">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<blockquote class="team-quote">
-							<div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."<br><br>- Peter Finlan</p>
-						</blockquote>
+						<div id="testimonySlider">
+							<div class="slide">
+								<blockquote class="team-quote">
+									<div class="avatar"><img src="img/people/glorio.jpg" alt="User Avatar"></div>
+									<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."
+
+									<br><br>- Glorio Yulianto</p>
+								</blockquote>
+							</div>
+							<div class="slide">
+								<blockquote class="team-quote">
+									<div class="avatar"><img src="img/people/glorio.jpg" alt="User Avatar"></div>
+									<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."
+
+									<br><br>- Glorio Yulianto</p>
+								</blockquote>
+							</div>
+							<div class="slide">
+								<blockquote class="team-quote">
+									<div class="avatar"><img src="img/people/glorio.jpg" alt="User Avatar"></div>
+									<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc."
+
+									<br><br>- Glorio Yulianto</p>
+								</blockquote>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -297,10 +319,7 @@
 			<div class="showcase-wrap">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6">
-
-						</div>
-						<div class="col-md-6">
+						<div class="col-md-offset-3 col-md-6">
 							<h1>What's there?</h1>
 							<p>Have you ever wonder when you passed by a crowd of people and don't know what's happening? With Shout we make a shout and ask people what's going on - or probably people already put a shout on it.</p>
 

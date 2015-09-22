@@ -2,6 +2,14 @@ $(window).load(function() {
 	$('.loading-page').fadeOut();
 });
 
+$('body').click(function() {
+	var x = event.pageX;
+	var y = event.pageY;
+	// var pin = "<img src='img/icon/pin-red.png' style='position: absolute; top:"+(y-70)+"px; left:"+x+"px;'></div>";
+	console.log("position: " + x +"px "+ y + "px");
+	// $(this).append(pin);
+});
+
 $(document).ready(function() {
 
 	/***************** Waypoints ******************/
@@ -33,6 +41,15 @@ $(document).ready(function() {
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
+		imagesLoaded: true,
+		autoPlay: true,
+		pageDots: false,
+		wrapAround: true
+	});
+	$('#testimonySlider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		prevNextButtons: true,
 		imagesLoaded: true,
 		autoPlay: true,
 		pageDots: false,
