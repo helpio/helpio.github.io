@@ -1,6 +1,6 @@
 @media screen and (max-width:1200px){
 	.device{left:35%;}
-	footer li{margin-right:10%;}
+	footer li{margin-right:7%;}
 	.feature-content{width:55%;}
 }
 @media screen and (max-width:991px){
@@ -14,6 +14,8 @@
 }
 @media screen and (max-width:680px){
 	.feature-content{width:60%;}
+	.pin1 .wp1{display: none !important;}
+	.pin3 .wp1{display: none !important;}
 }
 @media screen and (max-width:640px){
 	.use-btn{display:none;}

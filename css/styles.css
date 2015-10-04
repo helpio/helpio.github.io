@@ -511,6 +511,86 @@ Buttons
 }
 
 /* ==========================================================================
+Modal box
+========================================================================== */
+.modal-header {
+    text-align: center;
+    background-color: #4EAEE8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+    border-bottom: none;
+}
+.modal-header .modal-title {
+    font-size: 30px;
+    padding-top: 10px;
+}
+.modal-body {
+    text-align: center;
+    line-height: 30px;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+.modal-body .login-facebook {
+    background-color: #49639F;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 300px;
+    margin: 30px auto 0 auto;
+}
+.modal-body .login-facebook:hover {
+    background-color: #3E5792;
+}
+.modal-body .login-facebook .facebook {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.modal-body .separator {
+    width: 300px;
+    margin: 20px auto 30px auto;
+}
+.modal-body .separator .or-separator {
+    font-weight: bold;
+    padding: 8px;
+    background-color: #fff;
+}
+.modal-body hr {
+    margin: -15px auto 0 auto;
+}
+.modal-body input {
+    width: 300px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.modal-body input:hover,
+.modal-body input:focus {
+    outline: none;
+}
+.modal-body .agreement {
+    padding-top: 20px;
+    line-height: 18px;
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+}
+.modal-body .submit {
+    margin-top: 40px;
+    background-color: rgb(255, 100, 25);
+    color: #fff;
+    border: none;
+    width: 300px;
+}
+.modal-body .submit:hover,
+.modal-body .submit:focus {
+    background-color: rgb(235, 80, 5);
+    color: #fff;
+    outline: none;
+}
+
+/* ==========================================================================
 Navigation
 ========================================================================== */
 .nav-toggle {
@@ -574,7 +654,52 @@ Navigation
     right: 143px;
 }
 
-/* Loading page */
+.nav-wrapper .button-custom {
+    position: relative;
+    top: 5px;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 12px;
+    color: #fff;
+}
+.nav-wrapper .button-custom {
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.nav-wrapper .button-custom .button-left {
+    display: inline-block;
+    width: 50%;
+    padding: 5px 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+}
+.nav-wrapper .button-custom .button-left:hover,
+.nav-wrapper .button-custom .button-left:focus {
+    background-color: rgba(255, 100, 25, 0.8);
+}
+.nav-wrapper .button-custom .button-right {
+    display: inline-block;
+    width: 50%;
+    padding: 5px 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+    margin-left: -4px;
+    border-left: 1px solid #fff;
+}
+.nav-wrapper .button-custom .button-right:hover,
+.nav-wrapper .button-custom .button-right:focus {
+    background-color: rgba(255, 100, 25, 0.8);
+}
+
+/* ==========================================================================
+Login Loading 
+========================================================================== */
 .loading-page {
     position: fixed;
     z-index: 1000;
@@ -759,26 +884,60 @@ Features Slider
     background-size: cover;
     text-align: center;
 }
+.map-intro-bg .click-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 15px;
+    background-color: rgb(255, 100, 25);
+    color: #fff;
+    box-shadow: 1px 1px 1px #333;
+    border-radius: 5px;
+}
+.map-intro-bg .pin-positioning {
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+}
+.map-intro-bg .pin1 {
+    position: absolute;
+    top: 185px;
+    left: 24%;
+}
+.map-intro-bg .pin1 > img, 
+.map-intro-bg .pin2 > img,
+.map-intro-bg .pin3 > img {
+    width: 40px;
+}
+.map-intro-bg .pin2 {
+    position: absolute;
+    top: 235px;
+    left: 49%;
+}
+.map-intro-bg .pin3 {
+    position: absolute;
+    top: 350px;
+    left: 75%;
+}
+.map-intro-bg .wp1 {
+    position: absolute;
+    top: -73px;
+    left: -103px;
+}
 .map-intro-bg .info-pin {
-    padding-top: 100px;
-    padding-bottom: 5px;
-    width: 300px;
+    width: 250px;
+}
+.map-intro-bg .info-pin2 {
+    position: absolute;
+}
+.map-intro-bg .info-pin3 {
+    position: absolute;
 }
 .map-intro-bg .main-pin {
     width: 40px;
 }
 .map-intro-bg .pin {
     position: absolute;
-}
-.map-intro-bg .info {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #FFF;
-    width: 300px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 3px;
 }
 .map-intro-bg .info h4 {
     padding-top: 0;
@@ -846,6 +1005,7 @@ Showcase
 }
 .device {
     position: absolute;
+    animation-delay: 1s;
     top: 60px;
     left: 20%;
     min-height: 676px;
@@ -1034,7 +1194,7 @@ footer ul {
 }
 footer li {
     float: left;
-    margin-right: 15%;
+    margin-right: 7%;
     list-style: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -1064,7 +1224,7 @@ Nav Overlay
 .overlay nav {
     position: relative;
     top: 50%;
-    height: 60%;
+    height: 80%;
     text-align: center;
     font-size: 54px;
     -webkit-transform: translateY(-50%);

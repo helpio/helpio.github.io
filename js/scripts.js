@@ -5,7 +5,7 @@ $(window).load(function() {
 $('.map-intro-bg').click(function() {
 	var x = event.layerX;
 	var y = event.layerY;
-	var pin = "<img src='img/icon/pin-red.png' style='position: absolute; top:"+(y-60)+"px; left:"+(x-25)+"px;'></div>";
+	var pin = "<img src='img/icon/pin.png' style='position: absolute; top:"+(y-35)+"px; left:"+(x-15)+"px;'></div>";
 	console.log("position: " + x +"px "+ y + "px");
 	$(this).append(pin);
 });
@@ -15,7 +15,7 @@ $(document).ready(function() {
 	/***************** Waypoints ******************/
 
 	$('.wp1').waypoint(function() {
-		$('.wp1').addClass('animated fadeInLeft');
+		$('.wp1').addClass('animated fadeInDown');
 	}, {
 		offset: '75%'
 	});
