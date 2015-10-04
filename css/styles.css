@@ -675,6 +675,8 @@ Navigation
     border-bottom-left-radius: 5px;
     color: #fff;
     text-align: center;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .nav-wrapper .button-custom .button-right {
     display: inline-block;
@@ -686,12 +688,16 @@ Navigation
     text-align: center;
     margin-left: -4px;
     border-left: 1px solid #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 .nav-wrapper .button-custom .button-right:hover,
 .nav-wrapper .button-custom .button-right:focus,
 .nav-wrapper .button-custom .button-left:hover,
 .nav-wrapper .button-custom .button-left:focus {
     background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 /* ==========================================================================
