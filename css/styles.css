@@ -660,26 +660,21 @@ Navigation
     border: none;
     outline: none;
     padding: 0;
-    font-size: 12px;
     color: #fff;
 }
 .nav-wrapper .button-custom {
     cursor: pointer;
-    border: 1px solid #fff;
     border-radius: 5px;
+    font-weight: bold;
 }
 .nav-wrapper .button-custom .button-left {
     display: inline-block;
     width: 50%;
-    padding: 5px 20px;
+    padding: 5px 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-color: rgba(0,0,0,0);
+    color: #fff;
     text-align: center;
-}
-.nav-wrapper .button-custom .button-left:hover,
-.nav-wrapper .button-custom .button-left:focus {
-    background-color: rgba(255, 100, 25, 0.8);
 }
 .nav-wrapper .button-custom .button-right {
     display: inline-block;
@@ -687,14 +682,16 @@ Navigation
     padding: 5px 20px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgba(0,0,0,0);
+    color: #fff;
     text-align: center;
     margin-left: -4px;
     border-left: 1px solid #fff;
 }
 .nav-wrapper .button-custom .button-right:hover,
-.nav-wrapper .button-custom .button-right:focus {
-    background-color: rgba(255, 100, 25, 0.8);
+.nav-wrapper .button-custom .button-right:focus,
+.nav-wrapper .button-custom .button-left:hover,
+.nav-wrapper .button-custom .button-left:focus {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ==========================================================================
@@ -725,7 +722,6 @@ Header-nav
     padding: 10px 20px;
     font-size: 14px;
     font-family: 'Pontano Sans', sans-serif;
-    text-transform: uppercase;
     color: #EEEEEE;
 }
 .header-nav:hover {
