@@ -889,6 +889,7 @@ Features Slider
     color: #fff;
     box-shadow: 1px 1px 1px #333;
     border-radius: 5px;
+    visibility: hidden;
 }
 .map-intro-bg .pin-positioning {
     position: absolute;
@@ -897,8 +898,8 @@ Features Slider
 }
 .map-intro-bg .pin1 {
     position: absolute;
-    top: 185px;
-    left: 24%;
+    top: 393px;
+    left: 20%;
 }
 .map-intro-bg .pin1 > img, 
 .map-intro-bg .pin2 > img,
@@ -907,13 +908,13 @@ Features Slider
 }
 .map-intro-bg .pin2 {
     position: absolute;
-    top: 235px;
-    left: 49%;
+    top: 150px;
+    left: 43%;
 }
 .map-intro-bg .pin3 {
     position: absolute;
-    top: 350px;
-    left: 75%;
+    top: 353px;
+    left: 66%;
 }
 .map-intro-bg .wp1 {
     position: absolute;
