@@ -565,9 +565,15 @@ Modal box
     padding: 10px 20px;
     margin-bottom: 10px;
 }
-.modal-body input:hover,
+.modal-body input:hover {
+    outline: none;
+    padding: 11px 21px;
+    border: 1px solid #888;
+}
 .modal-body input:focus {
     outline: none;
+    padding: 11px 21px;
+    border: 1px solid #333;
 }
 .modal-body .agreement {
     padding-top: 20px;
