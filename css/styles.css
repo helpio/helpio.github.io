@@ -816,8 +816,8 @@ Hero
     color: rgb(255, 255, 255);
 }
 .hero .send-link:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 100, 25);
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 80, 5);
 }
 .hero .logo-helpio {
     position: absolute;
