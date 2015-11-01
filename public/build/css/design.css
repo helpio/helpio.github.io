@@ -122,18 +122,18 @@ a:focus {
   cursor: pointer;
 }
 .btn.btn-light-gray {
-  background-color: #eeeeee;
+  background-color: #cccccc;
   cursor: pointer;
 }
 .btn.btn-light-gray:hover {
-  background-color: #e1e1e1;
+  background-color: #bfbfbf;
 }
 .btn.btn-light-gray.disable {
-  background-color: #ffffff;
+  background-color: #e6e6e6;
   cursor: not-allowed;
 }
 .btn.btn-light-gray.chosen {
-  background-color: #e1e1e1;
+  background-color: #bfbfbf;
   cursor: pointer;
 }
 .btn.btn-red {
@@ -167,18 +167,18 @@ a:focus {
   cursor: pointer;
 }
 .btn.btn-blue {
-  background-color: #0000ff;
+  background-color: #1e7eef;
   cursor: pointer;
 }
 .btn.btn-blue:hover {
-  background-color: #0000e6;
+  background-color: #1071e3;
 }
 .btn.btn-blue.disable {
-  background-color: #3333ff;
+  background-color: #4e99f2;
   cursor: not-allowed;
 }
 .btn.btn-blue.chosen {
-  background-color: #0000e6;
+  background-color: #1071e3;
   cursor: pointer;
 }
 .input {
@@ -215,7 +215,7 @@ a:focus {
   background-color: #6f6f6f;
 }
 .nav-bar-invert-color {
-  background-color: #eeeeee;
+  background-color: #cccccc;
   color: #ffffff;
 }
 .menu .menu-tag {
@@ -256,7 +256,7 @@ a:focus {
   margin: 24px 0 0 -5px;
 }
 .footer {
-  color: #eeeeee;
+  color: #cccccc;
 }
 .btn.btn-round {
   -webkit-border-radius: 5px;
@@ -316,18 +316,18 @@ a:focus {
   cursor: pointer;
 }
 .btn.btn-light-gray {
-  background-color: #eeeeee;
+  background-color: #cccccc;
   cursor: pointer;
 }
 .btn.btn-light-gray:hover {
-  background-color: #e1e1e1;
+  background-color: #bfbfbf;
 }
 .btn.btn-light-gray.disable {
-  background-color: #ffffff;
+  background-color: #e6e6e6;
   cursor: not-allowed;
 }
 .btn.btn-light-gray.chosen {
-  background-color: #e1e1e1;
+  background-color: #bfbfbf;
   cursor: pointer;
 }
 .btn.btn-red {
@@ -361,18 +361,18 @@ a:focus {
   cursor: pointer;
 }
 .btn.btn-blue {
-  background-color: #0000ff;
+  background-color: #1e7eef;
   cursor: pointer;
 }
 .btn.btn-blue:hover {
-  background-color: #0000e6;
+  background-color: #1071e3;
 }
 .btn.btn-blue.disable {
-  background-color: #3333ff;
+  background-color: #4e99f2;
   cursor: not-allowed;
 }
 .btn.btn-blue.chosen {
-  background-color: #0000e6;
+  background-color: #1071e3;
   cursor: pointer;
 }
 .btn.btn-helpio {
@@ -614,16 +614,63 @@ body.profile header .additional-info .message-expand {
   -webkit-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  width: 200px;
+  width: 300px;
   height: 300px;
   background-color: #ffffff;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 body.profile header .additional-info .message-expand svg.message {
   position: absolute;
   top: -8px;
   right: 22px;
+}
+body.profile header .additional-info .message-expand .message-list .subtitle {
+  position: relative;
+  top: -3px;
+  color: #888888;
+  font-style: italic;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 15px 0 15px;
+  margin-bottom: -3px;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message {
+  height: 60px;
+  padding: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #cccccc;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message.unread {
+  background-color: #eeeeee;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message .message-name {
+  font-weight: bold;
+  font-size: 12px;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message .message-content {
+  overflow: hidden;
+  height: 30px;
+  width: 100%;
+  font-size: 12px;
+  color: #888888;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message .message-time {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 10px;
+  color: #888888;
+}
+body.profile header .additional-info .message-expand .message-list .wrapper-message:nth-child(1) {
+  border-top: 1px solid #cccccc;
+}
+body.profile header .additional-info .message-expand .message-detail {
+  display: none;
+}
+body.profile header .additional-info .message-expand .message-detail button {
+  color: #ffffff;
 }
 body.profile header .search-bar {
   -webkit-border-top-right-radius: 5px;
@@ -673,7 +720,6 @@ body.profile section.main .info-wrapper {
   border-top-left-radius: 10px;
   -webkit-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 15px solid #ffffff;
   background: #ffffff;
   overflow: hidden;
 }
@@ -684,6 +730,7 @@ body.profile section.main .info-wrapper .scroll-wrapper {
   overflow-x: hidden;
 }
 body.profile section.main .info-wrapper .scroll-wrapper #content-header {
+  padding: 10px 10px 0 10px;
   color: #ff6419;
   font-style: italic;
   position: relative;
@@ -695,7 +742,7 @@ body.profile section.main .info-wrapper .scroll-wrapper #content-header #content
   position: absolute;
   font-size: 10px;
   top: 25px;
-  right: 5px;
+  right: 15px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .btn-left,
 body.profile section.main .info-wrapper .scroll-wrapper .btn-right {
@@ -730,14 +777,15 @@ body.profile section.main .info-wrapper .scroll-wrapper .btn-right {
   float: right;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content {
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 12px;
 }
-body.profile section.main .info-wrapper .scroll-wrapper .info-content .thumbnail {
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .image {
   cursor: pointer;
 }
-body.profile section.main .info-wrapper .scroll-wrapper .info-content .thumbnail:hover,
-body.profile section.main .info-wrapper .scroll-wrapper .info-content .thumbnail:focus {
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .image:hover,
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .image:focus {
+  border: none;
   outline: none;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content .icon {
@@ -745,30 +793,81 @@ body.profile section.main .info-wrapper .scroll-wrapper .info-content .icon {
   top: -5px;
   width: 12px;
 }
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-text {
+  padding: 0 15px;
+}
 body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-location {
+  padding: 0 10px;
   line-height: 30px;
   color: #ff6419;
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 15px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .comment-header {
   font-style: italic;
   color: #888888;
-  padding: 5px 0;
+  padding: 5px 10px;
 }
-body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment #content-message-wrapper {
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper {
   display: inline-block;
+  position: relative;
+  width: 100%;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #cccccc;
 }
-body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment #content-message-wrapper:last-child {
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-name {
+  font-weight: bold;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-message {
+  padding-right: 15px;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-time {
+  font-size: 10px;
+  color: #888888;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-heart {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper:last-child {
   border-bottom: 0;
+  margin-bottom: 0;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .content-message-new {
+  display: inline-block;
+  background-color: #eeeeee;
+  padding: 5px 0;
+  margin-bottom: -5px;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .content-message-new .comment-input {
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #eeeeee;
+  padding: 5px 10px;
+  margin-top: 5px;
+  width: 100%;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .content-message-new .comment-input:hover,
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .content-message-new .comment-input:focus {
+  border: 1px solid #1e7eef;
+  outline: none;
+}
+body.profile section.main .info-wrapper .scroll-wrapper .info-content .content-message-new button {
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 10px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content .slick-dots {
-  bottom: -15px;
+  bottom: -30px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content .slick-slider {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }

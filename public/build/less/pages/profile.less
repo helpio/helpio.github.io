@@ -93,15 +93,65 @@ body.profile {
 				display: none;
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
-				padding: 10px;
-				width: 200px;
+				width: 300px;
 				height: 300px;
 				background-color: @white;
 				text-align: center;
+				overflow-x: hidden;
+				overflow-y: scroll;
+
 				svg.message {
 					position: absolute;
 					top: -8px;
 					right: 22px;
+				}
+				.message-list {
+					.subtitle {
+						position: relative;
+						top: -3px;
+						color: @gray;
+						font-style: italic;
+						border-bottom: 1px solid @gray-light;
+						padding: 10px 15px 0 15px;
+						margin-bottom: -3px;
+					}
+					.wrapper-message {
+						height: 60px;
+						padding: 10px 0;
+						text-align: left;
+						cursor: pointer;
+						border-bottom: 1px solid @gray-light;
+						&.unread {
+							background-color: @gray-lighter;
+						}
+						.message-name {
+							font-weight: bold;
+							font-size: 12px;
+						}
+						.message-content {
+							overflow: hidden;
+							height: 30px;
+							width: 100%;
+							font-size: 12px;
+							color: @gray;
+						}
+						.message-time {
+							position: absolute;
+							top: 0px;
+							right: 10px;
+							font-size: 10px;
+							color: @gray;
+						}
+					}
+					.wrapper-message:nth-child(1) {
+						border-top: 1px solid @gray-light;
+					}
+				}
+				.message-detail {
+					display: none;
+					button {
+						color: @white;
+					}
 				}
 			}
 		}
@@ -139,7 +189,6 @@ body.profile {
 			top: 10px;
 			box-shadow: 0 2px 4px @shadow-2;
 			.border-radius(10px);
-			border: 15px solid @white;
 			background: @white;
 			overflow: hidden;
 			
@@ -150,6 +199,7 @@ body.profile {
 				overflow-x: hidden;
 
 				#content-header {
+					padding: 10px 10px 0 10px;
 					color: @helpio;
 					font-style: italic;
 					position: relative;
@@ -161,7 +211,7 @@ body.profile {
 						position: absolute;
 						font-size: 10px;
 						top: 25px;
-						right: 5px;
+						right: 15px;
 					}
 				}
 				.btn-left, .btn-right {
@@ -185,12 +235,13 @@ body.profile {
 					float: right;
 				}
 				.info-content {
-					padding-top: 10px;
+					padding-top: 5px;
 					font-size: 12px;
 
-					.thumbnail {
+					.image {
 						cursor: pointer;
 						&:hover, &:focus {
+							border: none;
 							outline: none;
 						}
 					}
@@ -199,36 +250,80 @@ body.profile {
 						top: -5px;
 						width: 12px;
 					}
+					#content-text {
+						padding: 0 15px;
+					}
 					#content-location {
+						padding: 0 10px;
 						line-height: 30px;
 						color: @helpio;
 						border-bottom: 1px solid @gray-light;
-						padding-bottom: 10px;
-						padding-top: 10px;
+						padding: 10px 15px;
 					}
 					#content-comment {
 						.comment-header {
 							font-style: italic;
 							color: @gray;
-							padding: 5px 0;
+							padding: 5px 10px;
 						}
-						#content-message-wrapper {
+						.content-message-wrapper {
 							display: inline-block;
+							position: relative;
+							width: 100%;
 							padding-bottom: 5px;
 							margin-bottom: 5px;
 							border-bottom: 1px solid @gray-light;
+							.comment-name {
+								font-weight: bold;
+							}
+							.comment-message {
+								padding-right: 15px;
+							}
+							.comment-time {
+								font-size: 10px;
+								color: @gray;
+							}
+							.comment-heart {
+								position: absolute;
+								top: 15px;
+								left: 15px;
+							}
 							&:last-child {
 								border-bottom: 0;
+								margin-bottom: 0;
 							}
+						}
+					}
+					.content-message-new {
+						display: inline-block;
+						background-color: @gray-lighter;
+						padding: 5px 0;
+						margin-bottom: -5px;
+
+						.comment-input {
+							.border-radius(@rad-xs);
+							border: 1px solid @gray-lighter;
+							padding: 5px 10px;
+							margin-top: 5px;
+							width: 100%;
+							&:hover, &:focus {
+								border: 1px solid @blue;
+								outline: none;
+							}
+						}
+						button {
+							margin-top: 5px;
+							color: @white;
+							font-size: 10px;
 						}
 					}
 
 					// change default css from another library
 					.slick-dots {
-						bottom: -15px;
+						bottom: -30px;
 					}
 					.slick-slider {
-						margin-bottom: 10px;
+						margin-bottom: 30px;
 					}
 				}
 			}
