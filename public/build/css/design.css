@@ -546,10 +546,9 @@ body.profile header .profile-wrapper .profile-expand {
   border-bottom-left-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   padding: 10px;
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 210px;
   background-color: #ffffff;
-  text-align: center;
 }
 body.profile header .profile-wrapper .profile-expand svg.profile {
   position: absolute;
@@ -568,6 +567,48 @@ body.profile header .profile-wrapper .profile-expand .profile-expand-photo {
   -webkit-border-bottom-left-radius: 50%;
   border-bottom-left-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: 33%;
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-name {
+  color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "HelveticaNeue";
+  text-align: center;
+  margin-top: 3%;
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-status {
+  color: #9b9b9b;
+  font-size: 17px;
+  font-family: "MonotypeCorsiva";
+  text-align: center;
+  margin-top: -5px;
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-popularity .profile-expand-stars {
+  float: left;
+  padding-left: 13%;
+  padding-right: 3%;
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-popularity .profile-expand-rate {
+  color: rgba(255, 100, 25, 0.85);
+  font-size: 16px;
+  font-family: "HelveticaNeue";
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-settings {
+  position: absolute;
+  color: #000000;
+  font-size: 13px;
+  font-family: "HelveticaNeue";
+  bottom: 3%;
+  left: 5%;
+}
+body.profile header .profile-wrapper .profile-expand .profile-expand-logout {
+  position: absolute;
+  color: #000000;
+  font-size: 13px;
+  font-family: "HelveticaNeue";
+  bottom: 3%;
+  right: 5%;
 }
 body.profile header .additional-info img.notification,
 body.profile header .additional-info img.message {
@@ -588,16 +629,48 @@ body.profile header .additional-info .notification-expand {
   -webkit-border-bottom-left-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 360px;
   background-color: #ffffff;
-  text-align: center;
 }
 body.profile header .additional-info .notification-expand svg.notification {
   position: absolute;
   top: -8px;
   right: 52px;
+}
+body.profile header .additional-info .notification-expand .notification-text {
+  height: 25px;
+  top: 5px;
+  position: relative;
+}
+body.profile header .additional-info .notification-expand .notification-list-container {
+  height: 335px;
+  width: 100%;
+  overflow: hidden;
+}
+body.profile header .additional-info .notification-expand .notification-list-container .notification-list {
+  overflow: auto;
+  height: 100%;
+  width: calc(100% + 15px);
+}
+body.profile header .additional-info .notification-expand .notification-list-container .notification-list .notification-content {
+  padding-top: 5px;
+  display: table;
+  width: 100%;
+  height: 20%;
+}
+body.profile header .additional-info .notification-expand .notification-list-container .notification-list .notification-content .notification-user-img {
+  display: table-cell;
+  padding-left: 15px;
+}
+body.profile header .additional-info .notification-expand .notification-list-container .notification-list .notification-content .notification-text {
+  display: table-cell;
+  font-size: 10px;
+  vertical-align: top;
+  text-align: left;
+}
+body.profile header .additional-info .notification-expand .notification-list-container .notification-list .notification-content .notification-twing-img {
+  display: table-cell;
 }
 body.profile header .additional-info .message-expand {
   position: absolute;

@@ -40,10 +40,9 @@ body.profile {
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
 				padding: 10px;
-				width: 300px;
-				height: 300px;
+				width: 260px;
+				height: 210px;
 				background-color: @white;
-				text-align: center;
 				svg.profile {
 					position: absolute;
 					top: -8px;
@@ -54,9 +53,50 @@ body.profile {
 					width: 80px;
 					.border-radius(50%);
 					box-shadow: 0 2px 5px @shadow-2;
+					margin-left: 33%;
 				}
 				.profile-expand-name {
-					
+					color: @black;
+					font-size: 17px;
+					font-weight: bold;
+					font-family: "HelveticaNeue";
+					text-align: center;
+					margin-top: 3%;
+				}
+				.profile-expand-status {
+					color: @gray-light3;
+					font-size: 17px;
+					font-family: "MonotypeCorsiva";
+					text-align: center;
+					margin-top: -5px;
+				}
+				.profile-expand-popularity {
+					.profile-expand-stars {
+						float:left;
+						padding-left: 13%;
+						padding-right: 3%;
+					}
+					.profile-expand-rate {
+						color: @helpio-a;
+						font-size: 16px;
+						font-family: "HelveticaNeue";
+					}
+				}
+				.profile-expand-settings {
+					position: absolute;
+					color: @black;
+					font-size: 13px;
+					font-family: "HelveticaNeue";
+					bottom: 3%;
+					left: 5%;
+				}
+				.profile-expand-logout {
+					position: absolute;
+					color: @black;
+					font-size: 13px;
+					font-family: "HelveticaNeue";
+					bottom: 3%;
+					right: 5%;
 
 				}
 			}
@@ -66,7 +106,7 @@ body.profile {
 			img.message {
 				cursor: pointer;
 			}
-			.notification-expand{
+			.notification-expand {
 				color: @gray-dark;
 				position: absolute;
 				top: 40px;
@@ -74,16 +114,52 @@ body.profile {
 				display: none;
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
-				padding: 10px;
-				width: 200px;
-				height: 300px;
+				width: 300px;
+				height: 360px;
 				background-color: @white;
-				text-align: center;
 				svg.notification {
 					position: absolute;
 					top: -8px;
 					right: 52px;
 				}
+				.notification-text {
+					height: 25px;
+					top: 5px;
+					position: relative;
+				}
+				.notification-list-container {
+					height: 335px;
+					width: 100%;
+					overflow: hidden;
+					.notification-list {
+						overflow: auto;
+						height: 100%;
+						width: ~'calc(100% + 15px)';
+						.notification-content {
+							padding-top: 5px;
+							display: table;
+							width: 100%;
+							height: 20%;
+							.notification-user-img {
+								display: table-cell;
+								padding-left: 15px;
+							}
+							.notification-text {
+								display: table-cell;
+								font-size: 10px;
+								vertical-align: top;
+								text-align: left;
+							}
+							.notification-twing-img {
+								display: table-cell;
+					
+							}
+						}
+					}
+				}
+
+
+
 			}
 			.message-expand {
 				position: absolute;
