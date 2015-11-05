@@ -668,9 +668,96 @@ body.profile header .additional-info .message-expand .message-list .wrapper-mess
 }
 body.profile header .additional-info .message-expand .message-detail {
   display: none;
+  padding: 10px;
 }
-body.profile header .additional-info .message-expand .message-detail button {
+body.profile header .additional-info .message-expand .message-detail .message-detail-header {
+  font-style: italic;
+  font-size: 12px;
+  color: #888888;
+  cursor: pointer;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat {
+  padding: 5px 0;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat .message-photo {
+  width: 45px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat .message-opposite {
+  position: relative;
+  font-size: 12px;
+  padding: 5px 10px 20px 10px;
+  text-align: left;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat .message-opposite .message-time {
+  font-size: 10px;
+  color: #cccccc;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat .message-myself {
+  position: relative;
+  font-size: 12px;
+  padding: 5px 10px 20px 10px;
+  text-align: left;
+  width: 200px;
+  margin-left: 10px;
   color: #ffffff;
+  background-color: #1e7eef;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-chat .message-myself .message-time {
+  font-size: 10px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-new {
+  background: #cccccc;
+  padding: 5px 10px;
+  margin: 0 -10px -10px -10px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-new .message-input {
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  margin-top: 5px;
+  width: 200px;
+}
+body.profile header .additional-info .message-expand .message-detail .message-new .message-input:hover,
+body.profile header .additional-info .message-expand .message-detail .message-new .message-input:focus {
+  border: 1px solid #1e7eef;
+  outline: none;
+}
+body.profile header .additional-info .message-expand .message-detail .message-new button {
+  color: #ffffff;
+  font-size: 10px;
 }
 body.profile header .search-bar {
   -webkit-border-top-right-radius: 5px;
@@ -820,16 +907,17 @@ body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-c
   font-weight: bold;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-message {
-  padding-right: 15px;
+  padding-right: 35px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-time {
   font-size: 10px;
   color: #888888;
 }
-body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-heart {
+body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper .comment-like {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  cursor: pointer;
+  top: 20px;
+  right: 10px;
 }
 body.profile section.main .info-wrapper .scroll-wrapper .info-content #content-comment .content-message-wrapper:last-child {
   border-bottom: 0;

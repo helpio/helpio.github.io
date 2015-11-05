@@ -1,0 +1,16 @@
+@property int data_id;
+@property NSString *thumbnail;
+@property NSString *title;
+@property NSString *subtitle;
+@property NSString *name;
+@property NSString *prof_img;
+@property int time;
+@property int comment_count;
+@property int like_count;
+@property BOOL expired;
+@property float distance;
+@property float lat,lon;
+@property BOOL liked;
+@property BOOL commented;
+@property int score;
+@property BOOL is_notification;

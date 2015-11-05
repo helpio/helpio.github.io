@@ -25,7 +25,7 @@
 	<link href="build/css/bootstrap.css" rel="stylesheet">
 	<link href="build/css/design.css" rel="stylesheet">
 	<link href="build/css/animate.css" rel="stylesheet">
-	<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Google Font -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
@@ -186,8 +186,53 @@
 						</div>
 					</div>
 					<div class="message-detail">
-						<button class="btn btn-blue">back</button>
-						message
+						<div class="message-detail-header message-back pull-left"><span class="fa fa-caret-left"></span> Back</div>
+						<div class="message-detail-header pull-right">Message with <span id="message-information">Daniel</span></div>
+						<div class="clearfix"></div>
+						<div class="message-chat">
+							<div class="message-photo pull-left">
+								<img src="build/img/profile.png"/>
+							</div>
+							<div class="message-opposite pull-right">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<div class="message-time">7:23 PM</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="message-chat">
+							<div class="message-myself pull-left">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<div class="message-time">7:23 PM</div>
+							</div>
+							<div class="message-photo pull-right">
+								<img src="build/img/profile.png"/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="message-chat">
+							<div class="message-photo pull-left">
+								<img src="build/img/profile.png"/>
+							</div>
+							<div class="message-opposite pull-right">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<div class="message-time">7:23 PM</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="message-chat">
+							<div class="message-myself pull-left">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<div class="message-time">7:23 PM</div>
+							</div>
+							<div class="message-photo pull-right">
+								<img src="build/img/profile.png"/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="message-new">
+							<input class="message-input" type="text">
+							<button id="message-button" class="btn btn-radius btn-blue">Send</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -247,6 +292,9 @@
 										</div>
 										<div class="comment-time">
 											9 mins ago
+										</div>
+										<div class="comment-like comment-off">
+											<img src="build/img/heart-off.png"/>
 										</div>
 									</div>
 								</div>

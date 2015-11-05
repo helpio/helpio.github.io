@@ -106,6 +106,21 @@ $(document).ready(function() {
 	});
 
 	/**
+		Comment: Like
+	*/
+	/*$('.comment-on').click(function() {
+		$(this).html("<img src='build/img/heart-off.png'/>");
+		$(this).removeClass("comment-on");
+		$(this).addClass("comment-off");
+		console.log("asd");
+	});
+	$('.comment-off').click(function() {
+		$(this).html("<img src='build/img/heart-on.png'/>");
+		$(this).removeClass("comment-off");
+		$(this).addClass("comment-on");
+	});*/
+
+	/**
 		Message
 	 */
 	 $('.unread').click(function() {
@@ -113,13 +128,13 @@ $(document).ready(function() {
 	 });
 
 	 $('.wrapper-message').click(function() {
-	 	$('.wrapper-message').hide();
+	 	$('.message-list').hide();
 	 	$('.message-detail').show();
 	 });
 
-	 $('.message-detail > button').click(function() {
+	 $('.message-back').click(function() {
 	 	$('.message-detail').hide();
-	 	$('.wrapper-message').show();
+	 	$('.message-list').show();
 	 });
 
 	 /**
