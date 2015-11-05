@@ -39,46 +39,115 @@ body.profile {
 				display: none;
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
-				padding: 10px;
-				width: 260px;
-				height: 210px;
+				width: 250px;
+				height: 350px;
 				background-color: @white;
 				svg.profile {
 					position: absolute;
 					top: -8px;
 					left: 134px;
 				}
+
+				.profile-edit-button {
+					position: absolute;
+					top: 1%;
+					left: 2%;
+					z-index: 2;
+					width: 28x;
+					height: 28px;
+
+				}
+
+				.profile-close-button {
+					position: absolute;
+					top: 1%;
+					right: 2%;
+					z-index: 2;
+					width: 52px;
+					height: 28px;
+				}
+
+				.profile-background-photo {
+					width: 251px;
+					height: 170px;
+					z-index: 1;
+					.border-top-radius(10px);
+					position: absolute;
+				}
+
 				.profile-expand-photo {
 					display: inline-block;
 					width: 80px;
 					.border-radius(50%);
 					box-shadow: 0 2px 5px @shadow-2;
 					margin-left: 33%;
+					z-index: 2;
+					position: relative;
+					top: 120px;
 				}
+
+				.profile-wrapper-edit {
+					margin-left: 33%;
+					width: 80px;
+					height: 80px;
+					top: 180px;
+					z-index: 3;
+					position: absolute;
+					overflow: hidden;
+					.profile-photo-edit {
+						visibility: hidden;
+						width: 80px;
+						height: 80px;
+						.border-radius(50%);
+						z-index: 4;
+						position: relative;
+						top: -60px;
+						background: @white;
+						opacity: 0.6;
+						filter: alpha(opacity=60);
+						.profile-change-text {
+							top: 62px;
+							position: relative;
+							z-index: 5;
+							color: @black;
+							text-align: center;
+							font-size: 10px;
+						}
+					}
+					&:hover .profile-photo-edit {
+						visibility: visible;
+					}
+				}
+
+				
 				.profile-expand-name {
 					color: @black;
 					font-size: 17px;
 					font-weight: bold;
 					font-family: "HelveticaNeue";
 					text-align: center;
-					margin-top: 3%;
+					top: 130px;
+					position: relative;
 				}
 				.profile-expand-status {
 					color: @gray-light3;
-					font-size: 17px;
+					font-size: 16px;
 					font-family: "MonotypeCorsiva";
 					text-align: center;
-					margin-top: -5px;
+					position: relative;
+					top: 130px;
 				}
 				.profile-expand-popularity {
+					position: relative;
+					top: 134px;
+					left: 19%;
 					.profile-expand-stars {
 						float:left;
-						padding-left: 13%;
-						padding-right: 3%;
+						margin-right: 3%;
 					}
 					.profile-expand-rate {
-						color: @helpio-a;
-						font-size: 16px;
+						color: @lightblue;
+						font-size: 13px;
 						font-family: "HelveticaNeue";
 					}
 				}
@@ -87,7 +156,7 @@ body.profile {
 					color: @black;
 					font-size: 13px;
 					font-family: "HelveticaNeue";
-					bottom: 3%;
+					bottom: 2%;
 					left: 5%;
 				}
 				.profile-expand-logout {
@@ -95,7 +164,7 @@ body.profile {
 					color: @black;
 					font-size: 13px;
 					font-family: "HelveticaNeue";
-					bottom: 3%;
+					bottom: 2%;
 					right: 5%;
 
 				}
@@ -135,14 +204,17 @@ body.profile {
 						overflow: auto;
 						height: 100%;
 						width: ~'calc(100% + 15px)';
+						.unread {
+							background-color: @gray;
+						}
 						.notification-content {
-							padding-top: 5px;
+							padding: 5px 5px 3px 10px;
 							display: table;
 							width: 100%;
-							height: 20%;
+							height: 19%;
+							border-bottom: 1px solid @gray-light;
 							.notification-user-img {
 								display: table-cell;
-								padding-left: 15px;
 							}
 							.notification-text {
 								display: table-cell;
@@ -152,7 +224,18 @@ body.profile {
 							}
 							.notification-twing-img {
 								display: table-cell;
+								padding-left: 15px;
 					
+							}
+						}
+						.notification-hidden {
+							display: none;
+						}
+						.notification-load-button {
+							height: 5%;
+							a {
+								text-align: center;
+								color: @lightblue;
 							}
 						}
 					}
