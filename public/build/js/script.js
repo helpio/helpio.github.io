@@ -129,12 +129,14 @@ $(document).ready(function() {
 
 	 $('.wrapper-message').click(function() {
 	 	$('.message-list').hide();
+	 	$('.message-load-more').hide();
 	 	$('.message-detail').show();
 	 });
 
 	 $('.message-back').click(function() {
 	 	$('.message-detail').hide();
 	 	$('.message-list').show();
+	 	$('.message-load-more').show();
 	 });
 
 	 /**
