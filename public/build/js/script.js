@@ -131,6 +131,8 @@ $(document).ready(function() {
 	 	$('.message-list').hide();
 	 	$('.message-load-more').hide();
 	 	$('.message-detail').show();
+	 	// $('.message-detail').scrollTop(200);
+	 	location.hash = "#message-new";
 	 });
 
 	 $('.message-back').click(function() {
@@ -151,7 +153,11 @@ $(document).ready(function() {
 						<div class="col-lg-9"><div class="row"><div class="comment-name">Jessica Miller</div><div class="comment-message">\
 						'+ content +'\
 						</div><div class="comment-time">Just now</div></div></div>\
+						<div class="comment-like comment-off">\
+							<img src="build/img/heart-off.png"/>\
+						</div>\
 					</div>'
 		$('#content-comment').append(str);
+		location.hash = "#comment-new";
 	 });
 });

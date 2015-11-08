@@ -13,6 +13,20 @@ body.profile {
 			top: -5px;
 			padding: 10px 0;
 		}
+		.search-bar {
+			.border-radius(5px);
+			color: @gray-dark;
+			margin-top: 9px;
+			text-align: center;
+			width: 100%;
+			padding: 2px 10px;
+			background: @white;
+			border: none;
+			font-style: italic;
+			&:hover, &:focus {
+				outline: none;
+			}
+		}
 		.profile-wrapper {
 			cursor: pointer;
 			padding: 6px 0;
@@ -171,9 +185,13 @@ body.profile {
 			}
 		}
 		.additional-info {
+			padding-top: 7px;
+			text-align: center;
+			
 			img.notification,
 			img.message {
 				cursor: pointer;
+				width: 30px;
 			}
 			.unread {
 				background-color: @gray-lighter;
@@ -241,9 +259,6 @@ body.profile {
 						}
 					}
 				}
-
-
-
 			}
 			.message-expand {
 				position: absolute;
@@ -257,162 +272,152 @@ body.profile {
 				height: 300px;
 				background-color: @white;
 				text-align: center;
-				overflow: hidden;
+				svg.message {
+					position: absolute;
+					top: -8px;
+					right: 22px;
+				}
 
-				.message-scroll-wrapper {
-					width: ~'calc(100% + 15px)';
-					height: 300px;
-					overflow-y: scroll;
-					overflow-x: hidden;
+				.message-expand-wrapper {
+					overflow: hidden;
 
-					svg.message {
-						position: absolute;
-						top: -8px;
-						right: 22px;
-					}
-					.message-list {
-						.subtitle {
-							position: relative;
-							top: -3px;
-							color: @gray;
-							font-style: italic;
-							border-bottom: 1px solid @gray-light;
-							padding: 10px 15px 0 15px;
-							margin-bottom: -3px;
-						}
-						.wrapper-message {
-							height: 60px;
-							padding: 10px 0;
-							text-align: left;
-							cursor: pointer;
-							border-bottom: 1px solid @gray-light;
-
-							.message-name {
-								font-weight: bold;
-								font-size: 12px;
-							}
-							.message-content {
-								overflow: hidden;
-								height: 30px;
-								width: 100%;
-								font-size: 12px;
-								color: @gray;
-							}
-							.message-time {
-								position: absolute;
-								top: 0px;
-								right: 10px;
-								font-size: 10px;
-								color: @gray;
-							}
-						}
-						.wrapper-message:nth-child(1) {
-							border-top: 1px solid @gray-light;
-						}
-					}
-					.message-load-more {
-						height: 30px;
-						text-align:center;
-						cursor: pointer;
-						color: @blue;
-						padding-top: 5px;
-						&:hover {
-							background-color: @gray-lighter;
-						}
-					}
-					.message-detail {
-						display: none;
-						padding: 10px;
-
-						.message-detail-header {
-							font-style: italic;
-							font-size: 12px;
-							color: @gray;
-							cursor: pointer;
-						}
-						.message-chat {
-							padding: 5px 0;
-
-							.message-photo {
-								width: 45px;
-							}
-							.message-opposite {
+					.message-scroll-wrapper {
+						width: ~'calc(100% + 15px)';
+						height: 300px;
+						overflow-y: scroll;
+						overflow-x: hidden;
+						.border-radius(@rad-xs);
+						
+						.message-list {
+							.subtitle {
 								position: relative;
-								font-size: 12px;
-								padding: 5px 10px 20px 10px;
+								top: -3px;
+								color: @gray;
+								font-style: italic;
+								border-bottom: 1px solid @gray-light;
+								padding: 10px 15px 0 15px;
+								margin-bottom: -3px;
+							}
+							.wrapper-message {
+								height: 60px;
+								padding: 10px 0;
 								text-align: left;
-								width: 200px;
-								margin-right: 10px;
+								cursor: pointer;
+								border-bottom: 1px solid @gray-light;
+
+								.message-name {
+									font-weight: bold;
+									font-size: 12px;
+								}
+								.message-content {
+									overflow: hidden;
+									height: 30px;
+									width: 100%;
+									font-size: 12px;
+									color: @gray;
+								}
+								.message-time {
+									position: absolute;
+									top: 0px;
+									right: 10px;
+									font-size: 10px;
+									color: @gray;
+								}
+							}
+							.wrapper-message:nth-child(1) {
+								border-top: 1px solid @gray-light;
+							}
+						}
+						.message-load-more {
+							height: 30px;
+							text-align:center;
+							cursor: pointer;
+							color: @blue;
+							padding-top: 5px;
+							&:hover {
 								background-color: @gray-lighter;
-								.border-radius(@rad-xs);
-								.message-time {
-									font-size: 10px;
-									color: @gray-light;
-									position: absolute;
-									bottom: 5px;
-									right: 5px;
-								}
-							}
-							.message-myself {
-								position: relative;
-								font-size: 12px;
-								padding: 5px 10px 20px 10px;
-								text-align: left;
-								width: 200px;
-								margin-left: 10px;
-								color: @white;
-								background-color: @blue;
-								.border-radius(@rad-xs);
-								.message-time {
-									font-size: 10px;
-									color: @white;
-									position: absolute;
-									bottom: 5px;
-									right: 5px;
-								}
 							}
 						}
-						.message-new {
-							background: @gray-light;
-							padding: 5px 10px;
-							margin: 0 -10px -10px -10px;
-							.message-input {
-								.border-radius(@rad-xs);
-								border: 1px solid @gray-light;
-								padding: 5px 10px;
-								margin-top: 5px;
-								width: 200px;
-								&:hover, &:focus {
-									border: 1px solid @blue;
-									outline: none;
+						.message-detail {
+							display: none;
+							padding: 10px;
+
+							.message-detail-header {
+								font-style: italic;
+								font-size: 12px;
+								color: @gray;
+								cursor: pointer;
+							}
+							.message-chat {
+								padding: 5px 0;
+
+								.message-photo {
+									width: 45px;
+								}
+								.message-opposite {
+									position: relative;
+									font-size: 12px;
+									padding: 5px 10px 20px 10px;
+									text-align: left;
+									width: 200px;
+									margin-right: 10px;
+									background-color: @gray-lighter;
+									.border-radius(@rad-xs);
+									.message-time {
+										font-size: 10px;
+										color: @gray-light;
+										position: absolute;
+										bottom: 5px;
+										right: 5px;
+									}
+								}
+								.message-myself {
+									position: relative;
+									font-size: 12px;
+									padding: 5px 10px 20px 10px;
+									text-align: left;
+									width: 200px;
+									margin-left: 10px;
+									color: @white;
+									background-color: @blue;
+									.border-radius(@rad-xs);
+									.message-time {
+										font-size: 10px;
+										color: @white;
+										position: absolute;
+										bottom: 5px;
+										right: 5px;
+									}
 								}
 							}
-							button {
-								color: @white;
-								font-size: 10px;
+							.message-new {
+								background: @gray-lighter;
+								padding: 5px 10px;
+								margin: 0 -10px -10px -10px;
+								height: 50px;
+								.message-input {
+									.border-radius(@rad-xs);
+									border: 1px solid @gray-light;
+									padding: 5px 10px;
+									margin-top: 5px;
+									width: 200px;
+									&:hover, &:focus {
+										border: 1px solid @blue;
+										outline: none;
+									}
+								}
+								button {
+									color: @white;
+									font-size: 10px;
+									margin-top: -4px;
+								    width: 50px;
+								    height: 31px;
+								}
 							}
 						}
 					}
 				}
 			}
-		}
-		.search-bar {
-			.border-radius(5px);
-			color: @gray-dark;
-			margin-top: 9px;
-			text-align: center;
-			width: 100%;
-			padding: 2px 10px;
-			background: @white;
-			border: none;
-			font-style: italic;
-			&:hover, &:focus {
-				outline: none;
-			}
-		}
-		.additional-info {
-			padding-top: 7px;
-			text-align: center;
 		}
 	}
 	.map {
@@ -541,6 +546,7 @@ body.profile {
 						background-color: @gray-lighter;
 						padding: 5px 0;
 						margin-bottom: -5px;
+						width: 100%;
 
 						.comment-input {
 							.border-radius(@rad-xs);
