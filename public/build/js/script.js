@@ -51,6 +51,9 @@ $(document).ready(function() {
 			if (popMessage == true) {
 				$('img.message').click();
 			}
+		} else {
+			popProfile = false
+			$('.profile-expand').hide();
 		}
 	});
 
@@ -156,16 +159,6 @@ $(document).ready(function() {
 	}, function() {
 		$('.profile-wrapper-edit').css("display", "none");
 	});
-
-
-	$('.profile-close-button').click(function(e) {
-		popProfile = false;
-		e.preventDefault();
-		$('div.profile-expand').hide();
-		console.log("aba");
-		return false;
-	});
-
 
 
 	/**
