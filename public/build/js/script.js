@@ -51,11 +51,6 @@ $(document).ready(function() {
 			if (popMessage == true) {
 				$('img.message').click();
 			}
-		} else {
-			// clicked -> close popup
-			// console.log('close');
-			popProfile = false;
-			$('.profile-expand').hide();
 		}
 	});
 
@@ -113,17 +108,65 @@ $(document).ready(function() {
 	/**
 		Comment: Like
 	*/
-	/*$('.comment-on').click(function() {
-		$(this).html("<img src='build/img/heart-off.png'/>");
-		$(this).removeClass("comment-on");
-		$(this).addClass("comment-off");
+	$('.comment-on').click(function() {
+		$('.comment-on').css("display", "none");
+		$('.comment-off').css("display", "block");
 		console.log("asd");
 	});
 	$('.comment-off').click(function() {
-		$(this).html("<img src='build/img/heart-on.png'/>");
-		$(this).removeClass("comment-off");
-		$(this).addClass("comment-on");
-	});*/
+		$('.comment-off').css("display", "none");
+		$('.comment-on').css("display", "block");
+	});
+	// $('.comment-heart').click(function() {
+	// 	var src = ($(this).attr('src') === "<img src='build/img/heart-on.png'/>")
+	// 	? "build/img/heart-off.png"
+	// 	: "build/img/heart-on.png";
+	// 	$(this).attr('src', src);
+	// });
+
+	/**
+		Profile
+	*/
+	$('.profile-background-photo').hover(function() {
+		$('.profile-edit-button').css("display", "block");
+		$('.profile-close-button').css("display", "block");
+	}, function() {
+		$('.profile-edit-button').css("display", "none");
+		$('.profile-close-button').css("display", "none");
+	});
+
+	$('.profile-expand-photo').hover(function() {
+		$('.profile-wrapper-edit').css("display", "block");
+	}, function() {
+		$('.profile-wrapper-edit').css("display", "none");
+	});
+
+	$('.profile-close-button').hover(function() {
+		$('.profile-close-button').css("display", "block");
+		$('.profile-edit-button').css("display", "block");
+	});
+
+	$('.profile-edit-button').hover(function() {
+		$('.profile-edit-button').css("display", "block");
+		$('.profile-close-button').css("display", "block");
+	});
+
+	$('.profile-photo-edit').hover(function() {
+		$('.profile-wrapper-edit').css("display", "block");
+	}, function() {
+		$('.profile-wrapper-edit').css("display", "none");
+	});
+
+
+	$('.profile-close-button').click(function(e) {
+		popProfile = false;
+		e.preventDefault();
+		$('div.profile-expand').hide();
+		console.log("aba");
+		return false;
+	});
+
+
 
 	/**
 		Message
@@ -174,8 +217,9 @@ $(document).ready(function() {
 						<div class="col-lg-9"><div class="row"><div class="comment-name">Jessica Miller</div><div class="comment-message">\
 						'+ content +'\
 						</div><div class="comment-time">Just now</div></div></div>\
-						<div class="comment-like comment-off">\
-							<img src="build/img/heart-off.png"/>\
+						<div class="comment-like">\
+							<img src="build/img/heart-off.png" class="comment-off"/>\
+							<img src="build/img/heart-on.png" class="comment-on"/>\
 						</div>\
 					</div>'
 		$('#content-comment').append(str);

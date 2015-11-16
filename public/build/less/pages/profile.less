@@ -51,14 +51,17 @@ body.profile {
 			
 			.profile-expand {
 				position: absolute;
+				display: none;
 				top: 40px;
 				left: -100px;
-				display: none;
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
 				width: 250px;
 				height: 350px;
 				background-color: @white;
+				font-family: HelveticaNeue;
+
+
 				svg.profile {
 					position: absolute;
 					top: -10px;
@@ -67,128 +70,121 @@ body.profile {
 
 				.profile-edit-button {
 					position: absolute;
-					top: 1%;
-					left: 2%;
-					z-index: 2;
+					display: none;
+					top: 4px;
+					left: 3px;
 					width: 28x;
 					height: 28px;
 				}
 
 				.profile-close-button {
 					position: absolute;
-					top: 1%;
-					right: 2%;
-					z-index: 2;
+					display: none;
+					top: 4px;
+					right: 3px;
 					width: 52px;
 					height: 28px;
 				}
 
 				.profile-background-photo {
+					position: absolute;
 					width: 251px;
 					height: 170px;
-					z-index: 1;
 					.border-top-radius(10px);
-					position: absolute;
-				}
-
-				.profile-expand-photo {
-					display: inline-block;
-					width: 80px;
-					.border-radius(50%);
-					box-shadow: 0 2px 5px @shadow-2;
-					margin-left: 33%;
-					z-index: 2;
-					position: relative;
-					top: 120px;
 				}
 
 				.profile-wrapper-edit {
-					margin-left: 33%;
+					position: absolute;
+					display: none;
+					top: 180px;
 					width: 80px;
 					height: 80px;
-					top: 180px;
 					z-index: 3;
-					position: absolute;
+					margin-left: 83px;
 					overflow: hidden;
 					.profile-photo-edit {
-						visibility: hidden;
+						position: relative;
+						z-index: 4;
+						top: -60px;
 						width: 80px;
 						height: 80px;
-						.border-radius(50%);
-						z-index: 4;
-						position: relative;
-						top: -60px;
-						background: @white;
+						background-color: @white;
 						opacity: 0.6;
 						filter: alpha(opacity=60);
-						.profile-change-text {
-							top: 62px;
+						.border-radius(50%);
+						.profile-change-picture {
 							position: relative;
 							z-index: 5;
-							color: @black;
+							top: 62px;
 							text-align: center;
+							color: @black;
 							font-size: 10px;
 						}
 					}
-					&:hover .profile-photo-edit {
-						visibility: visible;
-					}
 				}
+
+				.profile-expand-photo {
+					position: relative;
+					display: inline-block;
+					margin-left: 83px;
+					z-index: 2;
+					top: 120px;
+					width: 80px;
+					.border-radius(50%);
+					box-shadow: 0 2px 5px @shadow-2;
+				}
+
+
 
 				
 				.profile-expand-name {
+					position: relative;
+					top: 130px;
+					text-align: center;
 					color: @black;
 					font-size: 17px;
 					font-weight: bold;
-					font-family: "HelveticaNeue";
-					text-align: center;
-					top: 130px;
-					position: relative;
 				}
 				.profile-expand-status {
+					position: relative;
+					top: 130px;
+					text-align: center;
 					color: @gray-light3;
 					font-size: 16px;
 					font-family: "MonotypeCorsiva";
-					text-align: center;
-					position: relative;
-					top: 130px;
 				}
 				.profile-expand-popularity {
 					position: relative;
 					top: 134px;
-					left: 19%;
+					left: 50px;
 					.profile-expand-stars {
 						float:left;
-						margin-right: 3%;
+						margin-right: 4px;
 					}
 					.profile-expand-rate {
 						color: @lightblue;
 						font-size: 13px;
-						font-family: "HelveticaNeue";
 					}
 				}
 				.profile-expand-settings {
 					position: absolute;
+					bottom: 4px;
+					left: 10px;
 					color: @black;
 					font-size: 13px;
-					font-family: "HelveticaNeue";
-					bottom: 2%;
-					left: 5%;
 				}
 				.profile-expand-logout {
 					position: absolute;
+					bottom: 4px;
+					right: 10px;
 					color: @black;
 					font-size: 13px;
-					font-family: "HelveticaNeue";
-					bottom: 2%;
-					right: 5%;
-
 				}
 			}
 		}
 		.additional-info {
-			padding-top: 7px;
 			text-align: center;
+			padding-top: 7px;
 			
 			img.notification,
 			img.message {
@@ -208,7 +204,6 @@ body.profile {
 				margin-bottom: -3px;
 			}
 			.notification-expand {
-				color: @gray-dark;
 				position: absolute;
 				top: 40px;
 				right: 10px;
@@ -216,7 +211,8 @@ body.profile {
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
 				width: 300px;
-				height: 300px;
+				height: 360px;
+				color: @gray-dark;
 				background-color: @white;
 				svg.notification {
 					position: absolute;
@@ -224,8 +220,6 @@ body.profile {
 					right: 55px;
 				}
 				.notification-text {
-					height: 25px;
-					top: 5px;
 					position: relative;
 					font-size: 12px;
 				}
@@ -536,6 +530,9 @@ body.profile {
 								cursor: pointer;
 								top: 20px;
 								right: 10px;
+								.comment-off {
+									display: none;
+								}
 							}
 							&:last-child {
 								border-bottom: 0;
