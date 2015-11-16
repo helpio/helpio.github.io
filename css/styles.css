@@ -455,6 +455,10 @@ a:hover, a:focus {
     color: rgba(255,100,25,0.5);
     text-decoration: none;
 }
+
+a:hover .button-left {
+    background-color: black;
+}
 .texture-overlay {
     position: absolute;
     top: 0px;

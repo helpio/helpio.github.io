@@ -37,15 +37,18 @@ body.profile {
 				.smooth();
 				text-decoration: none;
 			}
-			.profile-photo {
-				position: relative;
-				top: -3px;
-				width: 30px;
+
+			.profile-wrapper-header {
+				.profile-photo {
+					position: relative;
+					width: 30px;
+				}
+				#fullname {
+					display: inline-block;
+					position: relative;
+				}
 			}
-			#fullname {
-				display: inline-block;
-				position: relative;
-			}
+			
 			.profile-expand {
 				position: absolute;
 				top: 40px;
@@ -58,7 +61,7 @@ body.profile {
 				background-color: @white;
 				svg.profile {
 					position: absolute;
-					top: -8px;
+					top: -10px;
 					left: 134px;
 				}
 
@@ -69,7 +72,6 @@ body.profile {
 					z-index: 2;
 					width: 28x;
 					height: 28px;
-
 				}
 
 				.profile-close-button {
@@ -196,6 +198,15 @@ body.profile {
 			.unread {
 				background-color: @gray-lighter;
 			}
+			.subtitle {
+				position: relative;
+				top: -3px;
+				color: @gray;
+				font-style: italic;
+				border-bottom: 1px solid @gray-light;
+				padding: 10px 15px 0 15px;
+				margin-bottom: -3px;
+			}
 			.notification-expand {
 				color: @gray-dark;
 				position: absolute;
@@ -205,56 +216,57 @@ body.profile {
 				.border-radius(10px);
 				box-shadow: 0 2px 4px @shadow-2;
 				width: 300px;
-				height: 360px;
+				height: 300px;
 				background-color: @white;
 				svg.notification {
 					position: absolute;
-					top: -8px;
-					right: 52px;
+					top: -10px;
+					right: 55px;
 				}
 				.notification-text {
 					height: 25px;
 					top: 5px;
 					position: relative;
+					font-size: 12px;
 				}
 				.notification-list-container {
-					height: 335px;
+					height: 300px;
 					width: 100%;
 					overflow: hidden;
-					.notification-list {
-						overflow: auto;
-						height: 100%;
+
+					.notification-scroll-wrapper {
+						.border-radius(10px);
+						overflow-y: scroll;
+						overflow-x: hidden;	
+						height: 300px;
 						width: ~'calc(100% + 15px)';
 
 						.notification-content {
-							padding: 5px 5px 3px 10px;
-							display: table;
 							width: 100%;
-							height: 19%;
+							height: 65px;
+							padding: 10px 0;
 							border-bottom: 1px solid @gray-light;
-							.notification-user-img {
-								display: table-cell;
-							}
+							cursor: pointer;
+							text-align: left;
+							
 							.notification-text {
-								display: table-cell;
-								font-size: 10px;
-								vertical-align: top;
-								text-align: left;
+								top: 0;
+								.time-icon {
+									width: 10px;
+								}
+								.time-word {
+									font-size: 10px;
+									color: @gray-light;
+								}
 							}
-							.notification-twing-img {
-								display: table-cell;
-								padding-left: 15px;
-					
-							}
-						}
-						.notification-hidden {
-							display: none;
 						}
 						.notification-load-button {
-							height: 5%;
+							position: relative;
+							height: 30px;
+							padding-top: 5px;
 							a {
 								text-align: center;
-								color: @lightblue;
+								color: @blue;
 							}
 						}
 					}
@@ -274,7 +286,7 @@ body.profile {
 				text-align: center;
 				svg.message {
 					position: absolute;
-					top: -8px;
+					top: -10px;
 					right: 22px;
 				}
 
@@ -285,21 +297,12 @@ body.profile {
 						width: ~'calc(100% + 15px)';
 						height: 300px;
 						overflow-y: scroll;
-						overflow-x: hidden;
-						.border-radius(@rad-xs);
+						overflow-x: hidden;	
+						.border-radius(10px);					
 						
 						.message-list {
-							.subtitle {
-								position: relative;
-								top: -3px;
-								color: @gray;
-								font-style: italic;
-								border-bottom: 1px solid @gray-light;
-								padding: 10px 15px 0 15px;
-								margin-bottom: -3px;
-							}
 							.wrapper-message {
-								height: 60px;
+								height: 65px;
 								padding: 10px 0;
 								text-align: left;
 								cursor: pointer;
@@ -324,9 +327,6 @@ body.profile {
 									color: @gray;
 								}
 							}
-							.wrapper-message:nth-child(1) {
-								border-top: 1px solid @gray-light;
-							}
 						}
 						.message-load-more {
 							height: 30px;
@@ -335,7 +335,7 @@ body.profile {
 							color: @blue;
 							padding-top: 5px;
 							&:hover {
-								background-color: @gray-lighter;
+								text-decoration: underline;
 							}
 						}
 						.message-detail {
@@ -392,9 +392,10 @@ body.profile {
 							}
 							.message-new {
 								background: @gray-lighter;
+								height: 50px;
+								.border-bottom-radius(10px);
 								padding: 5px 10px;
 								margin: 0 -10px -10px -10px;
-								height: 50px;
 								.message-input {
 									.border-radius(@rad-xs);
 									border: 1px solid @gray-light;
@@ -443,6 +444,7 @@ body.profile {
 				height: 500px;
 				overflow-y: scroll;
 				overflow-x: hidden;
+				.border-radius(10px);
 
 				#content-header {
 					padding: 10px 10px 0 10px;

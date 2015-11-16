@@ -37,7 +37,7 @@ $(document).ready(function() {
 	*/
 
 	var popProfile = false;
-	$('.profile-wrapper').click(function() {
+	$('.profile-wrapper-header').click(function() {
 		if (popProfile == false) {
 			// not clicked -> open popup
 			// console.log('open');
@@ -59,6 +59,11 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.profile-close-button').click(function() {
+		popProfile = false
+		$('.profile-expand').hide();
+	});
+
 	var popNotification = false;
 	$('img.notification').click(function() {
 		if (popNotification == false) {
@@ -69,7 +74,7 @@ $(document).ready(function() {
 
 			// turn off other popup
 			if (popProfile == true) {
-				$('.profile-wrapper').click();
+				$('.profile-wrapper-header').click();
 			}
 			if (popMessage == true) {
 				$('img.message').click();
@@ -92,7 +97,7 @@ $(document).ready(function() {
 
 			// turn off other popup
 			if (popProfile == true) {
-				$('.profile-wrapper').click();
+				$('.profile-wrapper-header').click();
 			}
 			if (popNotification == true) {
 				$('img.notification').click();
@@ -125,6 +130,7 @@ $(document).ready(function() {
 	 */
 	 $('.unread').click(function() {
 	 	$(this).removeClass("unread");
+	 	checkUnread();
 	 });
 
 	 $('.wrapper-message').click(function() {
@@ -132,7 +138,6 @@ $(document).ready(function() {
 	 	$('.message-load-more').hide();
 	 	$('.message-detail').show();
 	 	// $('.message-detail').scrollTop(200);
-	 	location.hash = "#message-new";
 	 });
 
 	 $('.message-back').click(function() {
@@ -140,6 +145,22 @@ $(document).ready(function() {
 	 	$('.message-list').show();
 	 	$('.message-load-more').show();
 	 });
+
+	 /**
+	  * Icon on top right header
+	 */
+	 function checkUnread() {
+		 if ($('.notification-content').hasClass("unread")) {
+		 	$('.additional-info img.notification').attr("src", "build/img/icons/notif-on.png");
+		 } else {
+		 	$('.additional-info img.notification').attr("src", "build/img/icons/notif-off.png");
+		 }
+		 if ($('.wrapper-message').hasClass("unread")) {
+		 	$('.additional-info img.message').attr("src", "build/img/icons/mail-on.png");
+		 } else {
+		 	$('.additional-info img.message').attr("src", "build/img/icons/mail-off.png");
+		 }
+	}
 
 	 /**
 	  * Content
