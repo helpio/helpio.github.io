@@ -1,6 +1,8 @@
 .mod-header {
 	font-size: 23px;
+	font-weight: bold;
 	display: inline;
+	margin-left: 22px;
 }
 
 .login-helpio-logo {
@@ -12,11 +14,11 @@
 	display: inline;
 }
 
-.login-forgot-password {
-	color: #4A90E2;
-	margin: -10px auto 0 auto;
-	padding-top: -10px;
+.clickable-link {
+	color: blue;
+	display: inline;
 }
+
 
 .btn-default {
 	height: 35px;
