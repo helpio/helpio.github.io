@@ -1,3 +1,21 @@
+/*
+    Temporary CSS for the temporary landing page
+*/
+
+.temporary {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    line-height: 120px;
+    background-color: rgb(255,100,25);
+    color: rgb(255,255,255);
+}
+.temporary .amazing {
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
 /* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -680,7 +698,7 @@ Navigation
 }
 .nav-wrapper .button-custom .button-left {
     display: inline-block;
-    width: 50%;
+    width: 49%;
     padding: 5px 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -691,7 +709,7 @@ Navigation
 }
 .nav-wrapper .button-custom .button-right {
     display: inline-block;
-    width: 50%;
+    width: 49%;
     padding: 5px 20px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -773,6 +791,9 @@ Hero
     display: inline-block;
     color: #a1a9b0;
 }
+.hero h2 {
+    color: #333;
+}
 .hero h3 {
     margin: 10px 10px 10px 0;
     color: #888;
@@ -790,7 +811,7 @@ Hero
     font-size: 16px;
     color: #333;
     border: none;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
 
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
@@ -803,7 +824,7 @@ Hero
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding-left: 20px;
-    width: 180px;
+    width: 240px;
 }
 .hero input.send-link {
     border-top-right-radius: 10px;
@@ -897,16 +918,17 @@ Features Slider
     background-size: cover;
     text-align: center;
 }
-.map-intro-bg .click-info {
+.map-intro-bg .map-info {
     position: absolute;
+    z-index: 1;
     top: 15px;
     right: 15px;
-    padding: 15px;
-    background-color: rgb(255, 100, 25);
+    padding: 5px 10px;
+    font-size: 20px;
     color: #fff;
-    box-shadow: 1px 1px 1px #333;
-    border-radius: 5px;
-    visibility: hidden;
+    text-align: right;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.2);
 }
 .map-intro-bg .pin-positioning {
     position: absolute;
@@ -915,6 +937,7 @@ Features Slider
 }
 .map-intro-bg .pin1 {
     position: absolute;
+    z-index: 1;
     top: 393px;
     left: 20%;
 }
@@ -925,11 +948,13 @@ Features Slider
 }
 .map-intro-bg .pin2 {
     position: absolute;
+    z-index: 1;
     top: 150px;
     left: 43%;
 }
 .map-intro-bg .pin3 {
     position: absolute;
+    z-index: 1;
     top: 353px;
     left: 66%;
 }
@@ -955,6 +980,14 @@ Features Slider
 }
 .map-intro-bg .info h4 {
     padding-top: 0;
+}
+.map-intro-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 500px;
+    z-index: 2;
 }
 .map-intro-img {
     width: 100%;
@@ -1096,6 +1129,10 @@ Testimony
 /* ==========================================================================
 Screenshots
 ========================================================================== */
+.screenshots .screenshots-header {
+    padding: 40px 0 30px 0;
+    font-size: 40px;
+}
 .screenshots ul {
     margin: 0;
     padding: 0;
@@ -1193,9 +1230,6 @@ Download Now
 /* ==========================================================================
 Footer
 ========================================================================== */
-footer {
-    padding: 30px 0
-}
 footer a {
     color: rgb(255,100,25);
 }
@@ -1204,7 +1238,7 @@ footer p {
     font-size: 12px;
 }
 footer ul {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 footer li {
     float: left;
@@ -1218,6 +1252,10 @@ footer li a {
 }
 footer li:last-child {
     margin-right: 0;
+}
+footer p {
+    margin: -10px 0 20px 0;
+    line-height: 12px;
 }
 
 /* ==========================================================================
