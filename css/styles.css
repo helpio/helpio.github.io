@@ -570,6 +570,7 @@ Modal box
     height: 25px;
     margin-right: 10px;
 }
+
 .modal-body .separator {
     width: 300px;
     margin: 20px auto 30px auto;
@@ -598,20 +599,26 @@ Modal box
     border: 1px solid #333;
 }
 .modal-body .agreement {
-    padding-top: 3px;
-    line-height: 18px;
-    width: 300px;
+    line-height: 150%;
     text-align: center;
+    width: 300px;
+    font-size: 12px;
+    color: grey;
     margin: 0 auto;
-    font-size: 11px;
+    padding-top: 8px;
 }
 .modal-body .submit {
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: rgb(255, 100, 25);
     color: #fff;
     border: none;
     width: 300px;
 }
+
+.modal-body .most-bottom {
+    margin-bottom: 4px;
+}
+
 .modal-body .submit:hover,
 .modal-body .submit:focus {
     background-color: rgb(235, 80, 5);

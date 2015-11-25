@@ -8,6 +8,7 @@
 .login-helpio-logo {
 	width: 120px;
 	padding-left: 4px;
+	padding-right: 4px;
 }
 
 .header-inline {
@@ -15,7 +16,7 @@
 }
 
 .clickable-link {
-	color: blue;
+	color: #2B7BBE;
 	display: inline;
 }
 
