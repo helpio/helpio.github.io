@@ -781,10 +781,10 @@ Hero
     color: #fff;
 }
 .hero h1 {
-    font-family: 'Lora', serif;
-    margin: 200px 0 15px 0;
+    font-family: 'Raleway', sans-serif;
+    margin: 220px 0 0 0;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 34px;
     color: #333;
 }
 .hero h1 span {
@@ -793,6 +793,7 @@ Hero
 }
 .hero h2 {
     color: #333;
+    margin: 10px 0 20px 0;
 }
 .hero h3 {
     margin: 10px 10px 10px 0;
@@ -811,7 +812,7 @@ Hero
     font-size: 16px;
     color: #333;
     border: none;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.5);
 
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
@@ -1132,7 +1133,8 @@ Screenshots
 .screenshots .screenshots-header {
     padding: 40px 0 30px 0;
     font-size: 40px;
-    font-family: 'Lora', serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 .screenshots ul {
     margin: 0;
@@ -1232,14 +1234,14 @@ Download Now
 Footer
 ========================================================================== */
 footer a {
-    color: rgb(255,100,25);
+    color: #c7cacc;
 }
 footer p {
     color: #c7cacc;
     font-size: 12px;
 }
 footer ul {
-    margin-top: 60px;
+    margin-top: 53px;
 }
 footer li {
     float: left;

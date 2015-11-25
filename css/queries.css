@@ -16,6 +16,8 @@
 	.feature-content{width:60%;}
 	.pin1 .wp1{display: none !important;}
 	.pin3 .wp1{display: none !important;}
+	.temporary {line-height: 60px; font-size: 24px;}
+	.temporary .amazing {font-size: 40px;}
 }
 @media screen and (max-width:640px){
 	.use-btn{display:none;}
