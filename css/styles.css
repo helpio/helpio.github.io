@@ -573,7 +573,7 @@ Modal box
 
 .modal-body .separator {
     width: 300px;
-    margin: 20px auto 30px auto;
+    margin: 2px auto 2px auto;
 }
 .modal-body .separator .or-separator {
     font-weight: bold;
@@ -613,6 +613,10 @@ Modal box
     color: #fff;
     border: none;
     width: 300px;
+}
+
+.modal-body .most-top {
+    margin-top: 25px;
 }
 
 .modal-body .most-bottom {
