@@ -1,7 +1,7 @@
 @media screen and (max-width:1200px){
 	.device{left:35%;}
+	.hero .parallax img{width: 180%;}
 	footer li{margin-right:7%;}
-	.feature-content{width:55%;}
 }
 @media screen and (max-width:991px){
 	.nav-wrapper{height: 50px;}
@@ -9,15 +9,13 @@
 	.device{display:none;}
 	.screenshots ul li{width:50%;}
 	.screenshots-intro{padding:110px 0 100px 0;}
-	.feature-content{width:80%;}
 	.features-slider{height:100%}
+	.hero .parallax img{width: 250%;}
 }
 @media screen and (max-width:680px){
-	.feature-content{width:60%;}
 	.pin1 .wp1{display: none !important;}
 	.pin3 .wp1{display: none !important;}
-	.temporary {line-height: 60px; font-size: 24px;}
-	.temporary .amazing {font-size: 40px;}
+	.hero{height: 600px;}
 }
 @media screen and (max-width:640px){
 	.use-btn{display:none;}
@@ -25,9 +23,10 @@
 	nav{margin-top:40px;}
 	.overlay ul{margin-left:0px;}
 	.overlay ul li a{padding:20px 0;min-width:120px;font-size:12px;}
+	.hero .parallax img{width: 300%;}
 }
 @media screen and (max-width:465px){
-	.hero h1{font-size:30px;margin:300px 0 10px 0}
+	.hero h1{font-size:30px; margin:250px 0 10px 0}
 	section.video i{font-size:30px;}
 	section.video h1{font-size:15px;font-weight:400;}
 	section.video{padding:40px;}

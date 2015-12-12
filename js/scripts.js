@@ -2,15 +2,21 @@ $(window).load(function() {
 	$('.loading-page').fadeOut();
 });
 
-$('.map-intro-bg').click(function() {
-	var x = event.layerX;
-	var y = event.layerY;
-	var pin = "<img src='img/icon/pin.png' style='position: absolute; top:"+(y-35)+"px; left:"+(x-15)+"px;'></div>";
-	console.log("position: " + x +"px "+ y + "px");
-	$(this).append(pin);
-});
-
 $(document).ready(function() {
+
+	/* Parallax Effect */
+
+	$('.parallax').parallax();
+
+	/***** Map *****/
+
+	$('.map-intro-wrapper').click(function() {
+		var x = event.layerX;
+		var y = event.layerY;
+		var pin = "<img src='img/icon/drop-pin.png' style='position: absolute; top:"+(y-35)+"px; left:"+(x-15)+"px;'></div>";
+		console.log("position: " + x +"px "+ y + "px");
+		$('.map-intro-bg').append(pin);
+	});
 
 	/***************** Waypoints ******************/
 
@@ -72,6 +78,24 @@ $(document).ready(function() {
 		return false;
 	});
 
+	/** info-pin **/
+
+	$('.red-indicator').hover(function() {
+		$('.pin-info-1').toggle();
+		$('.pin-info-1').addClass('animated bounceInRight');
+	});
+	$('.yellow-indicator').hover(function() {
+		$('.pin-info-2').toggle();
+		$('.pin-info-2').addClass('animated bounceInRight');
+	})
+	$('.blue-indicator').hover(function() {
+		$('.pin-info-3').toggle();
+		$('.pin-info-3').addClass('animated bounceInRight');
+	})
+	$('.pin-indicator').hover(function() {
+		$('.pin-info-4').toggle();
+		$('.pin-info-4').addClass('animated bounceInRight');
+	})
 });
 
 $(document).ready(function() {

@@ -2,25 +2,19 @@
 	font-size: 23px;
 	font-weight: bold;
 	display: inline;
-	margin-left: 22px;
 }
-
 .login-helpio-logo {
 	width: 120px;
 	padding-left: 4px;
 	padding-right: 4px;
 }
-
 .header-inline {
 	display: inline;
 }
-
 .clickable-link {
 	color: #2B7BBE;
 	display: inline;
 }
-
-
 .btn-default {
 	height: 35px;
 }

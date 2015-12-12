@@ -35,6 +35,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Nunito:300|PT+Sans|Pontano+Sans' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lora:400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Slabo+27px|Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 
 		<!-- Facebook and Twitter integration -->
 		<meta property="og:title" content=""/>
@@ -68,48 +69,74 @@
 
 		<!-- Modal -->
 		<div class="modal fade" id="signup">
-			<div class="modal-dialog modal-md">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
-					<form id="signup">
-						<div class="modal-body">
-							<div class="mod-header">
-								<div class="header-inline">Join</div>
-								<img class="login-helpio-logo" src="img/logo/helpio.png"/>
-								<div class="header-inline">today</div>
-							</div>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div class="login-facebook">
-								<img src="img/logo/facebook.png" class="facebook"/>Sign up with facebook
-							</div>
-							<div class="separator">
-								<span class="or-separator">or</span>
-								<hr>
-							</div>
-							<input class="fullName" type="text" placeholder="Full Name"></input> <br>
-							<input class="email" type="text" placeholder="Email"></input> <br>
-							<input class="password" type="password" maxlength="20" placeholder="Password"></input> <br>
-							<input class="password" type="password" maxlength="20" placeholder="Confirm Password"></input> <br>
-							<button id="signup" type="button" class="submit btn btn-default">Sign up</button>
-							<div class="agreement">
-								By signing up, I agree to Helpio's 
-								<div class="clickable-link">Terms of Service</div>
-								, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="wrapper-login">
+									<img src="img/stock/login.jpg" class="signup-image"></img>
+								</div>
 							</div>
 						</div>
-					</form>
+						<div class="col-lg-6">
+							<div class="row">
+								<form id="signup">
+									<div class="modal-body">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<div class="mod-header">
+											<img class="login-helpio-logo" src="img/logo/helpio.png"/><br>
+											The best is yet to come, join us today!
+										</div>
+										<div class="login-facebook">
+											<img src="img/logo/facebook.png" class="facebook"/>Sign up with facebook
+										</div>
+										<div class="login-google">
+											<img src="img/logo/google.png" class="google"/>Sign up with Google
+										</div>
+										<div class="separator">
+											<span class="or-separator">or</span>
+											<hr>
+										</div>
+										<input class="fullName" type="text" placeholder="Full Name"></input> <br>
+										<input class="email" type="text" placeholder="Email"></input> <br>
+										<input class="password" type="password" maxlength="20" placeholder="Password"></input> <br>
+										<input class="password" type="password" maxlength="20" placeholder="Confirm Password"></input> <br>
+										<!-- Have an account? <a href="#">Log in</a> -->
+										<button id="signup" type="button" class="submit btn btn-default">Sign up</button>
+										<div class="agreement">
+											By signing up, I agree to Helpio's 
+											<div class="clickable-link">Terms of Service</div>
+											, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Modal -->
 		<div class="modal fade" id="login">
-			<div class="modal-dialog modal-md">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
-					<form id="signup">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="wrapper-login">
+									<img src="img/stock/login.jpg" class="login-image"></img>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="row">
+								<form id="signup">
 						<div class="modal-body">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div class="mod-header">Welcome back to </div>
-							<img class="login-helpio-logo" src="img/logo/helpio.png"/>
+							<img class="login-helpio-logo" src="img/logo/helpio.png"/><br>
+							<div class="mod-header">Welcome back!</div>
 							<div class="login-facebook">
 								<img src="img/logo/facebook.png" class="facebook"/>Log in with facebook
 							</div>
@@ -119,15 +146,18 @@
 							</div>
 							<input class="email" type="text" placeholder="Email"></input> <br>
 							<input class="password most-bottom" type="password" maxlength="20" placeholder="Password"></input> <br>
-							<span class="clickable-link">forgot your password?</span>
+							<span class="clickable-link">forgot your password?</span><br>
 							<button id="login" type="button" class="submit btn btn-default">Log in</button>
+								</div>
+								</form>
+							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="nav-wrapper">
+		<!-- <div class="nav-wrapper">
 			<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 hidden-sm hidden-xs">
 				<div class="row">
 					<div class="col-lg-3 col-md-3">
@@ -166,50 +196,56 @@
 				<p>MENU</p>
 				<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
 			</div>
-		</div>
+		</div> -->
+		
 
-		<header>
-			<section class="hero">
-				<div class="container">
-					<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
-					<div class="row hero-content">
-						<div class="col-md-6 text-left">
-							<h1 class="animated fadeInDown">Connecting People Through Maps</h1>
-							<h2>Change the way you see maps</h2>
-							<div class="visible-lg visible-md visible-sm hidden-xs">
-								<input type="text" class="input" maxlength="25" placeholder="Download it to your phone"></input>
-								<input type="submit" class="send-link"></input>
-							</div>
-							<div class="hidden-lg hidden-md hidden-sm visible-xs">
-								<img src="img/vendor/apple-appstore.svg" />
-							</div>
+		<section class="hero">
+			<div class="parallax"><img src="img/background/people.jpg"></div>
+			<div class="container">
+				<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
+				<button class="login-button" data-toggle="modal" data-target="#login">
+					Log in
+				</button>
+				<button class="signup-button" data-toggle="modal" data-target="#signup">
+					Sign up
+				</button>
+				<div class="row hero-content">
+					<div class="col-md-6 text-left">
+						<h1>Connecting People Through Maps</h1>
+						<h2>Change the way you see maps</h2>
+						<div class="visible-lg visible-md visible-sm hidden-xs">
+							<input type="number" class="input" placeholder="Download it to your phone" ></input>
+							<input type="submit" class="send-link"></input>
 						</div>
-						<div class="col-md-4">
-							<div class="device wp3">
-								<div class="device-content">
-									<div class="showcase-slider">
-										<ul class="slides" id="showcaseSlider">
-											<li>
-												<img src="img/preview/1.png" alt="Device Content Image">
-											</li>
-											<li>
-												<img src="img/preview/2.png" alt="Device Content Image">
-											</li>
-											<li>
-												<img src="img/preview/3.png" alt="Device Content Image">
-											</li>
-											<li>
-												<img src="img/preview/4.png" alt="Device Content Image">
-											</li>
-										</ul>
-									</div>
+						<div class="hidden-lg hidden-md hidden-sm visible-xs">
+							<img src="img/vendor/apple-appstore.svg" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="device wp3">
+							<div class="device-content">
+								<div class="showcase-slider">
+									<ul class="slides" id="showcaseSlider">
+										<li>
+											<img src="img/preview/1.png" alt="Device Content Image">
+										</li>
+										<li>
+											<img src="img/preview/2.png" alt="Device Content Image">
+										</li>
+										<li>
+											<img src="img/preview/3.png" alt="Device Content Image">
+										</li>
+										<li>
+											<img src="img/preview/4.png" alt="Device Content Image">
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-		</header>
+			</div>
+		</section>
 		<section class="video" id="about">
 			<div class="container">
 				<div class="row">
@@ -230,7 +266,24 @@
 							<div class="map-intro-wrapper">
 							</div>
 							<div class="map-info">
-								This is helpio's pin <img src="img/icon/pin.png" />
+								Twing?
+								<img src="img/icon/white-line.png" class="white-line">
+								<img src="img/icon/pin-red-indicator.png" class="red-indicator">
+								<img src="img/icon/pin-yellow-indicator.png" class="yellow-indicator">
+								<img src="img/icon/pin-blue-indicator.png" class="blue-indicator">
+								<img src="img/icon/pin.png" class="pin-indicator">
+								<div class="pin-info pin-info-1">
+									Red Color Twing is a HOT Twing with popularity 100+
+								</div>
+								<div class="pin-info pin-info-2">
+									Yellow Color Twing is more popular with popularity 50-99 
+								</div>
+								<div class="pin-info pin-info-3">
+									Blue Color Twing is a NEWBIE Twing with popularity 0-49
+								</div>
+								<div class="pin-info pin-info-4">
+									Orange Color Twing is your own Twings
+								</div>
 							</div>
 							<div class="pin1">
 								<img src="img/icon/pin-yellow.png" />
@@ -261,19 +314,19 @@
 					<div class="col-md-12">
 						<div class="col-md-4 feature-1 wp2">
 							<div class="feature-icon">
-								<i class="fa fa-wifi"></i>
+								<i class="fa fa-map"></i>
 							</div>
 							<div class="feature-content">
-								<h1>Be Map-Loving</h1>
+								<div class="h2 text-center">Be Map-Loving</div>
 								<p>Revolutionizing the way we use the map. Map is not only a navigational tool, but it’s also a platform to communicate, engage, and connect with people. How? Explore the app and be map-loving.</p>
 							</div>
 						</div>
 						<div class="col-md-4 feature-2 wp2 delay-05s">
 							<div class="feature-icon">
-								<i class="fa fa-map"></i>
+								<i class="fa fa-wifi"></i>
 							</div>
 							<div class="feature-content">
-								<h1>Be Discovered</h1>
+								<div class="h2 text-center">Be Discovered</div>
 								<p>Provide real-time information on notable happenings at your location. Create a buzz in your community as people like, view and comment on your twing. Place a twing and be discovered.</p>
 							</div>
 						</div>
@@ -282,8 +335,8 @@
 								<i class="fa fa-thumbs-o-up"></i>
 							</div>
 							<div class="feature-content">
-								<h1>Be Engaged</h1>
-								<p>Connect with what’s happening around you. See a twing of a person needing assistance down the block? Go and help! See a twing about your neighbor’s garage sale? Go and shop! See a twing about a concert down the road? Go and have fun! Be engaged with your community.</p>
+								<div class="h2 text-center">Be Engaged</div>
+								<p>Connect with what’s happening around you. See a twing of a person needing assistance? See a twing about nearby concerts? Go and have fun! Be engaged with your community.</p>
 							</div>
 						</div>
 
@@ -301,7 +354,7 @@
 								<img src="img/stock/1.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Optimised For Design</p>
+									<p>Football Game</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -311,7 +364,7 @@
 								<img src="img/stock/2.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>User Centric Design</p>
+									<p>House Party</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -321,7 +374,7 @@
 								<img src="img/stock/3.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Responsive and Adaptive</p>
+									<p>Free Food</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -331,7 +384,7 @@
 								<img src="img/stock/4.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Absolutely Free</p>
+									<p>Career Fair</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -345,7 +398,7 @@
 								<img src="img/stock/5.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Multi-Purpose Design</p>
+									<p>Hangout</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -355,7 +408,7 @@
 								<img src="img/stock/6.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Exclusive to Codrops</p>
+									<p>Garage Sale</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -365,7 +418,7 @@
 								<img src="img/stock/7.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>Made with Love</p>
+									<p>Welcoming Party</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -375,7 +428,7 @@
 								<img src="img/stock/8.jpg" alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content">
-									<p>In Sydney, Australia</p>
+									<p>Lost And Found</p>
 								</div>
 								</figcaption>
 							</figure>
@@ -478,10 +531,12 @@
 		<script src="js/jquery.fancybox.pack.js"></script>
 		
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/retina.js"></script>
+		<!-- <script src="js/retina.js"></script> -->
 		<script src="js/waypoints.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 		
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>

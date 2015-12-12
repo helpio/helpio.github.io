@@ -1,21 +1,3 @@
-/*
-    Temporary CSS for the temporary landing page
-*/
-
-.temporary {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-size: 28px;
-    line-height: 120px;
-    background-color: rgb(255,100,25);
-    color: rgb(255,255,255);
-}
-.temporary .amazing {
-    font-size: 100px;
-    text-transform: uppercase;
-}
-
 /* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -78,7 +60,7 @@ html {
 */
 html, button, input, select, textarea {
     font-family: sans-serif;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 html, body {
     overflow-x: hidden;
@@ -90,7 +72,7 @@ html, body {
 */
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*
@@ -535,6 +517,16 @@ Buttons
 /* ==========================================================================
 Modal box
 ========================================================================== */
+.modal .wrapper-login {
+    overflow: hidden;
+    border-radius: 5px;
+}
+.modal .wrapper-login .login-image {
+    height: 500px;
+}
+.modal .wrapper-login .signup-image {
+    height: 600px;
+}
 .modal-header {
     text-align: center;
     background-color: #4EAEE8;
@@ -550,8 +542,7 @@ Modal box
 .modal-body {
     text-align: center;
     line-height: 30px;
-    padding: 30px;
-    padding-bottom: 50px;
+    padding: 20px;
 }
 .modal-body .login-facebook {
     background-color: #49639F;
@@ -562,18 +553,28 @@ Modal box
     width: 300px;
     margin: 20px auto 0 auto;
 }
-.modal-body .login-facebook:hover {
-    background-color: #3E5792;
-}
 .modal-body .login-facebook .facebook {
     width: 25px;
     height: 25px;
     margin-right: 10px;
 }
-
+.modal-body .login-google {
+    background-color: #DC4E41;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 300px;
+    margin: 10px auto 0 auto;
+}
+.modal-body .login-google .google {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
 .modal-body .separator {
     width: 300px;
-    margin: 20px auto 30px auto;
+    margin: 10px auto 20px auto;
 }
 .modal-body .separator .or-separator {
     font-weight: bold;
@@ -608,7 +609,7 @@ Modal box
     padding-top: 8px;
 }
 .modal-body .submit {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: rgb(255, 100, 25);
     color: #fff;
     border: none;
@@ -689,7 +690,6 @@ Navigation
     top: 59px;
     right: 143px;
 }
-
 .nav-wrapper .button-custom {
     position: relative;
     top: 5px;
@@ -751,7 +751,7 @@ Login Loading
 Header-nav
 ========================================================================== */
 .nav-wrapper {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
     height: 40px;
@@ -763,7 +763,6 @@ Header-nav
     display: block;
     padding: 10px 20px;
     font-size: 14px;
-    font-family: 'Pontano Sans', sans-serif;
     color: #EEEEEE;
 }
 .header-nav:hover {
@@ -781,14 +780,54 @@ Hero
 ========================================================================== */
 .hero {
     position: relative;
+    overflow: hidden;
     padding: 10px 0 60px 0;
-    min-height: 800px;
-    background: rgb(255,100,25) url('../img/background/sf.jpg') no-repeat center center;
-    background-size: cover;
+    height: 800px;
+    
+    z-index: 0;
     color: #fff;
 }
+.hero .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.hero .parallax img {
+    display: none;
+    position: absolute;
+    left: 56%;
+    bottom: 0;
+    padding: 10px 0 60px 0;
+    width: 150%;
+}
+.hero .login-button {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    border: none;
+}
+.hero .signup-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.7);
+    color: #333333;
+    border: none;
+}
+.hero button.login-button:focus,
+.hero button.signup-button:focus{ 
+    outline: none;
+}
 .hero h1 {
-    font-family: 'Raleway', sans-serif;
     margin: 220px 0 0 0;
     font-weight: 300;
     font-size: 34px;
@@ -807,10 +846,6 @@ Hero
     color: #888;
 }
 #home {
-    width: 100%;
-    height: 100%;
-}
-.hero {
     width: 100%;
     height: 100%;
 }
@@ -834,6 +869,13 @@ Hero
     padding-left: 20px;
     width: 240px;
 }
+.hero input.input::-webkit-input-placeholder {
+   font-style: italic;
+}
+.hero input.input::-webkit-outer-spin-button,
+.hero input.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 .hero input.send-link {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;   
@@ -855,7 +897,7 @@ Hero
 }
 .hero .logo-helpio {
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 60px;
 }
 header i {
@@ -916,27 +958,87 @@ Custom Slider Controls (Flickity)
 Features Slider
 ========================================================================== */
 .map-intro {
-    cursor: url("../img/icon/pin.png") 15 35, auto;
+    cursor: url("../img/icon/drop-pin.png") 15 35, auto;
     overflow: hidden;
 }
 .map-intro-bg {
     position: relative;
-    min-height: 500px;
+    min-height: 570px;
     background: url('../img/map-berkeley.png') no-repeat center center;
     background-size: cover;
     text-align: center;
 }
 .map-intro-bg .map-info {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 15px;
     right: 15px;
-    padding: 5px 10px;
+    padding: 15px;
+    padding-bottom: 30px;
     font-size: 20px;
     color: #fff;
+    font-weight: bold;
     text-align: right;
     border-radius: 15px;
     background-color: rgba(0,0,0,0.2);
+    cursor: default;
+}
+.map-intro-bg .map-info .white-line {
+    display: block;
+    width: 3px;
+    margin-left: 30px;
+    padding-top: 50px;
+}
+.map-intro-bg .map-info .red-indicator,
+.map-intro-bg .map-info .yellow-indicator,
+.map-intro-bg .map-info .blue-indicator, 
+.map-intro-bg .map-info .pin-indicator {
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left: 27px;
+    width: 40px;
+    cursor: help;
+}
+.map-intro-bg .map-info .yellow-indicator {
+    top: 140px;
+}
+.map-intro-bg .map-info .blue-indicator {
+    top: 220px;
+}
+.map-intro-bg .map-info .pin-indicator {
+    top: 300px;
+}
+.map-intro-bg .map-info .pin-info {
+    display: none;
+    position: absolute;
+    right: 100px;
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid #FFF;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+.map-intro-bg .map-info .pin-info-1 {
+    top: 60px;
+    background-color: #F60C1A;
+    color: #FFF;
+}
+.map-intro-bg .map-info .pin-info-2 {
+    top: 140px;
+    background-color: #F7E53B;
+    color: #888;
+}
+.map-intro-bg .map-info .pin-info-3 {
+    top: 220px;
+    background-color: #4EAEE8;
+    color: #FFF;
+}
+.map-intro-bg .map-info .pin-info-4 {
+    top: 300px;
+    background-color: #FC541F;
+    color: #FFF;
 }
 .map-intro-bg .pin-positioning {
     position: absolute;
@@ -1020,14 +1122,10 @@ Features List
     color: #778899;
 }
 .feature-content {
-    display: inline-block;
-    margin-left: 0;
-    width: 65%;
-    color:;
+    text-align: justify;
 }
 .feature-icon {
-    display: inline-block;
-    margin-right: 25px;
+    margin: 20px auto;
     width: 90px;
     height: 90px;
     border: solid 2px rgb(255,100,25);
@@ -1140,7 +1238,6 @@ Screenshots
 .screenshots .screenshots-header {
     padding: 40px 0 30px 0;
     font-size: 40px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
 .screenshots ul {
