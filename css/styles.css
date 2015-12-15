@@ -592,7 +592,11 @@ Modal box
 }
 .modal-body .separator {
     width: 300px;
+<<<<<<< HEAD
     margin: 10px auto 20px auto;
+=======
+    margin: 2px auto 2px auto;
+>>>>>>> 1f95f94f790a476482676429c7576004ee98b39f
 }
 .modal-body .separator .or-separator {
     font-weight: bold;
@@ -630,6 +634,14 @@ Modal box
     border: none;
     width: 300px;
 }
+<<<<<<< HEAD
+=======
+
+.modal-body .most-top {
+    margin-top: 25px;
+}
+
+>>>>>>> 1f95f94f790a476482676429c7576004ee98b39f
 .modal-body .most-bottom {
     margin-bottom: 4px;
 }
