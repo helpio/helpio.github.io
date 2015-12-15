@@ -91,7 +91,7 @@ Links
 */
 
 a:focus {
-    outline: thin dotted;
+    outline: none;
     text-decoration: none;
 }
 
@@ -433,12 +433,16 @@ Global Styles
     clear: both;
 }
 a {
+    color: #2B7BBE;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
     -webkit-transition-property: color, border-color, background-color;
     transition-property: color, border-color, background-color;
+}
+a:hover {
+    color: #2B7BBE;
 }
 .nopadding {
     margin: 0 !important;
@@ -448,14 +452,6 @@ p {
     font-size: 14px;
     line-height: 25px;
 }
-a {
-    color: rgb(255,255,255)
-}
-a:hover, a:focus {
-    color: rgba(255,100,25,0.5);
-    text-decoration: none;
-}
-
 a:hover .button-left {
     background-color: black;
 }
@@ -519,13 +515,21 @@ Modal box
 ========================================================================== */
 .modal .wrapper-login {
     overflow: hidden;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    right: -1px;
+}
+.modal .wrapper-signup {
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 .modal .wrapper-login .login-image {
-    height: 500px;
+    height: 560px;
 }
-.modal .wrapper-login .signup-image {
-    height: 600px;
+.modal .wrapper-signup .signup-image {
+    height: 500px;
 }
 .modal-header {
     text-align: center;
@@ -542,16 +546,23 @@ Modal box
 .modal-body {
     text-align: center;
     line-height: 30px;
-    padding: 20px;
+    padding: 30px;
+}
+.modal-body a {
+    color: rgb(255,100,25);
+}
+.modal-body .login-facebook,
+.modal-body .login-google,
+.modal-body .login-email {
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    width: 250px;
+    margin: 10px auto 0 auto;
 }
 .modal-body .login-facebook {
     background-color: #49639F;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    width: 300px;
-    margin: 20px auto 0 auto;
 }
 .modal-body .login-facebook .facebook {
     width: 25px;
@@ -560,14 +571,21 @@ Modal box
 }
 .modal-body .login-google {
     background-color: #DC4E41;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    width: 300px;
-    margin: 10px auto 0 auto;
 }
 .modal-body .login-google .google {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+.modal-body .login-email {
+    background-color: #888888;
+}
+.modal-body .login-email .email {
+    color: #888888;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: #FFFFFF;
     width: 28px;
     height: 28px;
     margin-right: 10px;
@@ -580,9 +598,6 @@ Modal box
     font-weight: bold;
     padding: 8px;
     background-color: #fff;
-}
-.modal-body hr {
-    margin: -15px auto 0 auto;
 }
 .modal-body input {
     width: 300px;
@@ -601,11 +616,11 @@ Modal box
 }
 .modal-body .agreement {
     line-height: 150%;
-    text-align: center;
-    width: 300px;
+    text-align: left;
+    width: 250px;
     font-size: 12px;
     color: grey;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     padding-top: 8px;
 }
 .modal-body .submit {
@@ -615,11 +630,9 @@ Modal box
     border: none;
     width: 300px;
 }
-
 .modal-body .most-bottom {
     margin-bottom: 4px;
 }
-
 .modal-body .submit:hover,
 .modal-body .submit:focus {
     background-color: rgb(235, 80, 5);
@@ -798,10 +811,10 @@ Hero
 .hero .parallax img {
     display: none;
     position: absolute;
-    left: 56%;
+    left: 50%;
     bottom: 0;
     padding: 10px 0 60px 0;
-    width: 150%;
+    width: 120%;
 }
 .hero .login-button {
     position: absolute;
@@ -1124,20 +1137,11 @@ Features List
 .feature-content {
     text-align: justify;
 }
-.feature-icon {
-    margin: 20px auto;
-    width: 90px;
-    height: 90px;
-    border: solid 2px rgb(255,100,25);
-    border-radius: 50%;
-    vertical-align: top;
-    text-align: center;
-    font-size: 25px;
-    line-height: 90px;
+.icon-size {
+    display: inline-block;
+    width: 100px;
 }
-.feature-icon i {
-    color: rgb(255,100,25);
-}
+
 
 /* ==========================================================================
 Showcase
@@ -1337,11 +1341,13 @@ Download Now
 /* ==========================================================================
 Footer
 ========================================================================== */
-footer a {
-    color: #c7cacc;
+footer a,
+footer a:hover,
+footer a:focus {
+    color: rgb(255,100,25);
 }
 footer p {
-    color: #c7cacc;
+    color: #C7CACC;
     font-size: 12px;
 }
 footer ul {
@@ -1353,9 +1359,6 @@ footer li {
     list-style: none;
     text-transform: uppercase;
     font-weight: 400;
-}
-footer li a {
-    color: rgb(255,100,25);
 }
 footer li:last-child {
     margin-right: 0;
