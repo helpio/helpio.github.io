@@ -816,7 +816,7 @@ Hero
     right: 0;
     z-index: -1;
 }
-.hero::before {
+.hero .hero-content::before {
   content: '';
   position: absolute;
   top: 0;
@@ -829,7 +829,7 @@ Hero
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-.hero .hero-content {
+.hero .parallax {
     color: #FFFFFF;
 }
 .hero .parallax img {
@@ -840,23 +840,31 @@ Hero
     padding: 10px 0 60px 0;
     width: 120%;
 }
+.hero .logo-helpio {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50px;
+}
 .hero .login-button {
     position: absolute;
+    z-index: 1;
     top: 20px;
     right: 120px;
     padding: 10px 20px;
     border-radius: 4px;
-    background: rgba(255,100,25,0.7);
+    background: rgba(255, 100, 25, 0.9);
     color: #FFFFFF;
     border: none;
 }
 .hero .signup-button{
     position: absolute;
+    z-index: 1;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
     border-radius: 4px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.9);
     color: #333333;
     border: none;
 }
@@ -923,11 +931,6 @@ Hero
 .hero .send-link:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(235, 80, 5);
-}
-.hero .logo-helpio {
-    position: absolute;
-    top: 20px;
-    left: 50px;
 }
 
 /*====================
