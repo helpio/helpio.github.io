@@ -1,0 +1,72 @@
+.text-red {
+	color: rgb(255, 100, 25);
+}
+
+.text-grey {
+	color: #888888;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.text-underline {
+	font-style: underline;
+}
+
+body.termsandcondition {
+	margin: 0;
+	padding: 0;
+}
+
+body.termsandcondition header {
+	padding: 10px 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+body.termsandcondition header .logo {
+	width: 120px;
+}
+
+body.termsandcondition main {
+	text-align: justify;
+	margin-top: 20px;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 50px;
+}
+
+body.termsandcondition main .h1 {
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+body.termsandcondition main .h3 {
+	margin-top: 30px;
+}
+
+body.termsandcondition main .paragraph,
+body.termsandcondition main ul {
+	margin-bottom: 10px;
+	color: #555555;
+}
+
+body.termsandcondition main .copyright {
+	margin-top: 30px;
+}
+
+body.termsandcondition main .number {
+	margin-top: 10px;
+	position: absolute;
+	color: #333333;
+}
+
+body.termsandcondition main .content {
+	position: absolute;
+	padding-left: 40px;
+	margin-top: 10px;
+	color: #888888;
+}

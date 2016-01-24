@@ -69,18 +69,18 @@
 
 		<!-- Modal -->
 		<div class="modal fade" id="signup">
-			<div class="modal-dialog modal-lg">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-lg-5">
+							<div class="hidden-xs hidden-sm col-md-5 col-lg-5">
 								<div class="row">
 									<div class="wrapper-signup">
 										<img src="img/stock/signup.jpg" class="signup-image"></img>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-7">
+							<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
 								<div class="row">
 									<div class="modal-body">
 										<form id="signup">
@@ -99,15 +99,6 @@
 											<div class="login-email">
 												<div class="email"><span class="fa fa-envelope-o"></span></div>Sign up with Email
 											</div>
-											<!-- <div class="separator">
-												<span class="or-separator">or</span>
-												<hr>
-											</div>
-											<input class="fullName" type="text" placeholder="Full Name"></input> <br>
-											<input class="email" type="text" placeholder="Email"></input> <br>
-											<input class="password" type="password" maxlength="20" placeholder="Password"></input> <br>
-											<input class="password" type="password" maxlength="20" placeholder="Confirm Password"></input> <br>
-											<button id="signup" type="button" class="submit btn btn-default">Sign up</button> -->
 											<div class="agreement">
 												By signing up you indicate that you have read  
 												<span class="clickable-link">Terms of Service and Privacy Policy</span>
@@ -125,16 +116,14 @@
 
 		<!-- Modal -->
 		<div class="modal fade" id="login">
-			<div class="modal-dialog modal-lg">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-lg-7">
+							<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
 								<div class="row">
 									<div class="modal-body">
 										<form id="signup">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<!-- <img class="login-helpio-logo" src="img/logo/helpio.png"/><br> -->
 											Hi there! Just want to say<br>
 											<div class="mod-header">Welcome back!</div>
 											<hr></hr>
@@ -142,19 +131,11 @@
 												<img src="img/logo/facebook.png" class="facebook"/>Log in with Facebook
 											</div>
 											<div class="login-google">
-												<img src="img/logo/google.png" class="google"/>Sign up with Google
+												<img src="img/logo/google.png" class="google"/>Log in with Google
 											</div>
 											<div class="login-email">
-												<div class="email"><span class="fa fa-envelope-o"></span></div>Sign up with Email
+												<div class="email"><span class="fa fa-envelope-o"></span></div>Log in with Email
 											</div>
-											<!-- <div class="separator">
-												<span class="or-separator">or</span>
-												<hr>
-											</div>
-											<input class="email" type="text" placeholder="Email"></input> <br>
-											<input class="password most-bottom" type="password" maxlength="20" placeholder="Password"></input> <br>
-											<span class="clickable-link">forgot your password?</span><br>
-											<button id="login" type="button" class="submit btn btn-default">Log in</button> -->
 											<div class="agreement">
 												By signing up you indicate that you have read  
 												<span class="clickable-link">Terms of Service and Privacy Policy</span>
@@ -164,9 +145,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5">
+							<div class="hidden-xs hidden-sm col-md-5 col-lg-5">
 								<div class="row">
 									<div class="wrapper-login">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<img src="img/stock/login.jpg" class="login-image"></img>
 									</div>
 								</div>
@@ -177,52 +159,10 @@
 			</div>
 		</div>
 
-		<!-- <div class="nav-wrapper">
-			<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 hidden-sm hidden-xs">
-				<div class="row">
-					<div class="col-lg-3 col-md-3">
-						<a href="#about" class="text-center header-nav">
-							About
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<a href="#map" class="text-center header-nav">
-							Map
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<a href="#screenshots" class="text-center header-nav">
-							Guidelines
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<a href="#showcase" class="text-center header-nav">
-							Showcase
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-offset-1 col-lg-2 col-md-offset-0 col-md-3 hidden-sm hidden-xs">
-				<div class="button-custom">
-					<div class="button-left" data-toggle="modal" data-target="#signup">
-						Sign up
-					</div>
-					<div class="button-right" data-toggle="modal" data-target="#login">
-						Log in
-					</div>
-				</div>
-			</div>
-			<div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-right navicon">
-				<p>MENU</p>
-				<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
-			</div>
-		</div> -->
-		
-
 		<section class="hero">
-			<div class="parallax"><img src="img/background/background.jpg"></div>
+			<div class="parallax"><img src="img/background/people.jpg"></div>
 			<div class="container">
-				<a href="#"><img src="img/logo/helpio-white.png" alt="Helpio Logo" class="logo-helpio"></a>
+				<a href="#"><img src="img/logo/helpio.png" alt="Helpio Logo" class="logo-helpio"></a>
 				<button class="login-button" data-toggle="modal" data-target="#login">
 					Log in
 				</button>
@@ -230,7 +170,7 @@
 					Sign up
 				</button>
 				<div class="row hero-content">
-					<div class="col-md-12 text-center">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
 						<h1>Connecting People Through Maps</h1>
 						<h2>Helpio is changing the way we see maps</h2>
 						<div class="visible-lg visible-md visible-sm hidden-xs">
@@ -245,10 +185,11 @@
 				</div>
 			</div>
 		</section>
-		<section class="phone-section">
+
+		<section class="phone-section" id="phone">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<div class="text-center">
 							<div class="phone-wrapper-left">
 								<div class="h1">Content Header</div>
@@ -256,7 +197,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="hidden-xs hidden-sm col-md-6 col-lg-6">
 						<div class="device wp3">
 							<div class="device-content">
 								<div class="showcase-slider">
@@ -281,6 +222,7 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- <section class="video" id="about">
 			<div class="container">
 				<div class="row">
@@ -381,7 +323,7 @@
 			</div>
 		</section>
 		<section class="screenshots" id="screenshots">
-			<div class="screenshots-header text-center">The things you can do with Helpio</div>
+			<div class="screenshots-header text-center">What can you do with Helpio?</div>
 			<div class="container-fluid">
 				<div class="row">
 					<ul class="grid">
@@ -428,7 +370,7 @@
 					</ul>
 				</div>
 				<div class="row">
-					<ul class="grid hidden-sm hidden-xs">
+					<ul class="grid">
 						<li>
 							<figure>
 								<img src="img/stock/5.jpg" alt="Screenshot 01">
@@ -526,39 +468,24 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
-						<h1 class="footer-logo">
-							<img src="img/logo/helpio.png" alt="Footer Logo Blue">
-						</h1>
+						<img src="img/logo/helpio.png" class="footer-logo">
 					</div>
 					<div class="col-sm-6 col-md-9">
 						<ul class="footer-nav">
-							<li><a href="#about">About</a></li>
-							<li><a href="#features">Features</a></li>
-							<li><a href="#screenshots">Guidelines</li>
+							<li><a href="#phone">About</a></li>
+							<li><a href="#map">Features</a></li>
 							<li><a href="#">Privacy</a></li>
 							<li><a href="#">Terms and Conditions</a></li>
 						</ul>
 					</div>
 					<div class="col-sm-12 col-md-12">
 						<div class="text-center">
-							<p>© Helpio Inc. 2015 - <a href="#">Disclaimer</a></p>
+							<p>&copy Helpio Inc. 2015 - <a href="#">Disclaimer</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<div class="overlay overlay-boxify">
-			<nav>
-				<ul>
-					<li><a href="#"><i class="fa fa-lock"></i>Privacy</a></li>
-					<li><a href="#"><i class="fa fa-file-text-o"></i>Terms</a></li>
-				</ul>
-				<ul>
-					<li><a href="" data-toggle="modal" data-target="#signup"><i class="fa fa-user"></i>Sign up</a></li>
-					<li><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-user"></i>Log in</a></li>
-				</ul>
-			</nav>
-		</div>
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/min/toucheffects-min.js"></script>

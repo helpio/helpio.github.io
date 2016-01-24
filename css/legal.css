@@ -1,0 +1,60 @@
+.text-red {
+	color: rgb(255, 100, 25);
+}
+
+.text-grey {
+	color: #888888;
+}
+
+body.legal {
+	margin: 0;
+	padding: 0;
+}
+
+body.legal header {
+	padding: 10px 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+body.legal header .logo {
+	width: 120px;
+}
+
+body.legal main {
+	text-align: justify;
+	margin-top: 20px;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 50px;
+}
+
+body.legal main .h1 {
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+body.legal main .h3 {
+	margin-top: 30px;
+}
+
+body.legal main .paragraph,
+body.legal main ul {
+	margin-bottom: 10px;
+	color: #555555;
+}
+
+body.legal main .copyright {
+	margin-top: 30px;
+}
+
+body.legal main .number {
+	margin-top: 10px;
+	position: absolute;
+	color: #333333;
+}
+
+body.legal main .content {
+	position: absolute;
+	padding-left: 40px;
+	margin-top: 10px;
+	color: #888888;
+}
