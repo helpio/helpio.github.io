@@ -801,7 +801,7 @@ Hero
     position: relative;
     overflow: hidden;
     padding: 10px 0 60px 0;
-    height: 800px;
+    height: 100vh;
     
     z-index: 0;
     color: #fff;
@@ -814,18 +814,30 @@ Hero
     right: 0;
     z-index: -1;
 }
-.hero .hero-content::before {
+.hero .hero-content {
+    position: absolute;
+    display: inline-block;
+    top: 50vh;
+    left: 50vw;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
+.hero .hero-content .header-container {
+    display: inline-block;
+    width: 640px;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.hero .parallax::before {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-duration: 300ms;
-  transition-duration: 300ms;
+  background: rgba(0, 0, 0, 0.3);
 }
 .hero .parallax {
     color: #FFFFFF;
@@ -836,7 +848,7 @@ Hero
     left: 50%;
     bottom: 0;
     padding: 10px 0 60px 0;
-    width: 150%;
+    width: 130vw;
 }
 .hero .logo-helpio {
     position: absolute;
@@ -961,12 +973,40 @@ Phone Section
     height: 445px;
 }
 .phone-wrapper-left {
-    padding-top: 280px;
+    height: 100vh;
     color: #888888;
-    font-size: 20px;
+    font-size: 26px;
+}
+.phone-wrapper-left hr:nth-child(1) {
+    position: relative;
+    top: 70px;
 }
 .phone-wrapper-left .h1 {
     color: #333333;
+    margin-bottom: 40px;
+    font-size: 42px;
+}
+.phone-wrapper-left .container-left {
+    position: absolute;
+    display: inline-block;
+    padding-bottom: 50px;
+    width: calc(100% - 30px);
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
+.phone-wrapper-left .container-left img {
+    position: relative;
+    top: 15px;
+    width: 60px;
+    padding: 10px;
+    background: rgb(255,255,255);
+}
+.phone-wrapper-left .container-left .curious {
+    color: #CCCCCC;
+    font-style: italic;
+    font-size: 18px;
 }
 
 
@@ -1270,14 +1310,11 @@ Testimony
 /* ==========================================================================
 Screenshots
 ========================================================================== */
-.screenshots {
-    background-color: rgb(255, 100, 25);
-    color: #FFFFFF;
-}
 .screenshots .screenshots-header {
     padding: 20px 0 20px 0;
     font-size: 30px;
     font-weight: 300;
+    color: #333333;
 }
 .screenshots ul {
     margin: 0;

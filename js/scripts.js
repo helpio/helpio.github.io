@@ -8,6 +8,13 @@ $(document).ready(function() {
 
 	$('.parallax').parallax();
 
+	$(".typed").typed({
+        strings: ["locals", "neighbors", "strangers", "community"],
+        typeSpeed: 0,
+        loop: true,
+        backDelay: 1500,
+    });
+
 	/***** Map *****/
 
 	$('.map-intro-wrapper').click(function() {
